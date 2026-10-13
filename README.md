@@ -1,10 +1,10 @@
 # NeoBank Data Platform on Databricks
 
-An end-to-end banking data platform built on Azure Databricks. It ingests customer, account and transaction data from an Azure SQL Database and partner CSV files, models it through a Bronze, Silver and Gold lakehouse, tests the business layer with dbt, protects customer PII with Unity Catalog, and serves the results through an AI/BI dashboard, a Genie AI assistant, a Power BI report and an automated email report after every run.
+An end-to-end banking data platform built on Azure Databricks. It ingests customer, account and transaction data from an Azure SQL Database and partner CSV files, models it through a Bronze, Silver and Gold lakehouse, tests the business layer with dbt, protects customer PII with Unity Catalog, and serves the results through an AI/BI dashboard, a Genie AI assistant, a Microsoft Fabric Lakehouse with a Power BI report, and an automated email report after every run.
 
 The ingestion pipeline is metadata-driven: adding a new source table means adding a few rows to a config table, not writing a new notebook.
 
-**Tech stack:** Azure Databricks, PySpark, Spark SQL, Delta Lake, Auto Loader, Unity Catalog, Databricks Workflows, dbt (dbt-databricks), Azure SQL Database, Microsoft Entra ID, Power BI
+**Tech stack:** Azure Databricks, PySpark, Spark SQL, Delta Lake, Auto Loader, Unity Catalog, Databricks Workflows, dbt (dbt-databricks), Azure SQL Database, Microsoft Entra ID, Microsoft Fabric (Lakehouse, Dataflow Gen2), Power BI
 
 ---
 
@@ -17,6 +17,7 @@ The ingestion pipeline is metadata-driven: adding a new source table means addin
 - [Gold layer with dbt](#gold-layer-with-dbt)
 - [Data governance](#data-governance)
 - [Reporting](#reporting)
+- [Microsoft Fabric](#microsoft-fabric)
 - [Orchestration](#orchestration)
 - [Problems found and fixed](#problems-found-and-fixed)
 - [Repository structure](#repository-structure)
@@ -49,7 +50,8 @@ flowchart LR
     SLV -->|"dbt build<br/>5 models, 15 tests"| GLD["Gold<br/>business aggregates"]
     GLD --> DASH["AI/BI Dashboard"]
     GLD --> GENIE["Genie"]
-    GLD --> PBI["Power BI report"]
+    GLD -->|"Dataflow Gen2<br/>daily copy"| LH["Microsoft Fabric<br/>Lakehouse"]
+    LH --> PBI["Power BI report<br/>Direct Lake"]
     SLV --> SEC["Secure view<br/>PII masking and<br/>row-level security"]
     META["banking.metadata<br/>config, watermarks,<br/>audit log"] -.-> BRZ
     META -.-> SLV
@@ -160,7 +162,7 @@ Customer PII is protected with Unity Catalog. A secure view over `silver.custome
 
 A branch analyst sees masked data for their own branch only, while a compliance officer sees everything.
 
-Outside Databricks, the Power BI report only uses aggregate Gold tables. `customer_360`, which contains customer names, is deliberately left out.
+Outside Databricks, only aggregate Gold tables are shared. `customer_360`, which contains customer names, is deliberately left out of Microsoft Fabric and Power BI.
 
 ---
 
@@ -170,11 +172,28 @@ Outside Databricks, the Power BI report only uses aggregate Gold tables. `custom
 |---|---|
 | **AI/BI Dashboard** | Executive, branch, customer and credit risk views built on the Gold tables |
 | **Genie** | A Genie space over the Gold tables, so business users can ask questions in plain English, such as "which branch had the highest deposits?" |
-| **Power BI report** | Built in Power BI Desktop with the Azure Databricks connector (Import mode) on four Gold tables, published to a Power BI workspace with a scheduled daily refresh |
+| **Power BI report (Fabric)** | Built in Microsoft Fabric on a Direct Lake semantic model over the Fabric Lakehouse: total deposits, deposits by branch, daily transaction value, customers by risk grade and payment gateway performance |
+| **Power BI Desktop file** | The same report as a `.pbix` (Import mode, connected straight to the Databricks SQL warehouse), so it can be opened and refreshed without Fabric |
 | **Email run report** | After every run, a notebook reads the audit log and sends a styled HTML email with the overall status and a per-table breakdown of records loaded and any errors |
 
 <!-- Add your screenshot to screenshots/ or delete this line -->
 ![Power BI report](screenshots/powerbi_report.png)
+
+---
+
+## Microsoft Fabric
+
+The Gold layer is shared with Microsoft Fabric for business reporting:
+
+1. **Dataflow Gen2** (`Load NeoBank Gold`) connects to the Databricks SQL warehouse with the Azure Databricks connector and copies four Gold tables: `branch_performance`, `daily_bank_kpi`, `risk_customer_summary` and `transaction_channel_summary`.
+2. The tables land in a **Fabric Lakehouse** (`neobank_lakehouse`) as Delta tables, replaced on every refresh. The dataflow refreshes daily, after the Databricks job has finished.
+3. The Lakehouse's **SQL analytics endpoint** lets analysts query the tables with T-SQL.
+4. A **Direct Lake semantic model** (`NeoBank Gold Model`) on the Lakehouse powers the Power BI report, reading the Delta tables directly without a separate import.
+
+Why a copy rather than mirroring: the `banking` catalog uses Databricks default storage, which doesn't support the credential vending that Fabric mirroring needs (see [Problems found and fixed](#problems-found-and-fixed)). Dataflow Gen2 reads through the SQL warehouse instead, which default storage supports.
+
+<!-- Add your screenshot to screenshots/ or delete this line -->
+![Fabric Lakehouse](screenshots/fabric_lakehouse.png)
 
 ---
 
@@ -187,7 +206,7 @@ The whole pipeline runs as one Databricks Workflow:
 3. **dbt_gold:** runs `dbt build` on a serverless SQL warehouse, building and testing all Gold models.
 4. **Send_Email:** sends the HTML run report.
 
-The Power BI semantic model refreshes on its own schedule after the job has finished.
+After the job, the Fabric Dataflow Gen2 refreshes on its own daily schedule, copying the new Gold tables into the Lakehouse, and the Direct Lake report picks them up automatically.
 
 ---
 
@@ -201,7 +220,9 @@ Real issues that came up while building this, and how they were solved:
 
 **A typo in production.** The original Gold notebook named a column `ansaction_amount`. The dbt rebuild fixed it to `total_transaction_amount`, and the dashboard datasets were updated to match.
 
-**Microsoft Fabric mirroring isn't possible on default storage.** I first planned to mirror the Gold schema into Microsoft Fabric. The `banking` catalog uses Databricks default storage, which doesn't support the credential vending that mirroring relies on, so the `EXTERNAL USE SCHEMA` grant fails. Default storage does support ODBC/JDBC access through a SQL warehouse, which is how the Power BI report connects instead.
+**Microsoft Fabric mirroring isn't possible on default storage.** I first planned to mirror the Gold schema into Microsoft Fabric. The `banking` catalog uses Databricks default storage, which doesn't support the credential vending that mirroring relies on, so the `EXTERNAL USE SCHEMA` grant fails. Default storage does support access through a SQL warehouse, so the design was changed to a Dataflow Gen2 that copies the Gold tables into a Fabric Lakehouse on a schedule.
+
+**Getting a Fabric trial capacity.** Starting the Fabric trial initially failed for the tenant, and the first trial activated was a Power BI individual trial, which only unlocks Power BI Pro workspaces. The report was built first in Power BI Desktop against Databricks, and moved onto the Fabric Lakehouse once a Fabric trial capacity was available.
 
 ---
 
@@ -239,6 +260,9 @@ Databricks_Finance_data/
 ├── powerbi/
 │   └── NeoBank_Gold_Report.pbix         # Power BI report (no credentials stored)
 ├── screenshots/
+│   ├── dbt_lineage.png
+│   ├── fabric_lakehouse.png
+│   └── powerbi_report.png
 └── README.md
 ```
 
@@ -251,7 +275,8 @@ Databricks_Finance_data/
 - An Azure Databricks workspace with Unity Catalog and a Serverless or Pro SQL warehouse
 - An Azure SQL Database with the source tables, and a Microsoft Entra ID service principal with read access
 - Python 3.10+ for dbt (tested with dbt-core 1.12.5 and dbt-databricks 1.12.7)
-- Power BI Desktop (Windows) for the report
+- A Microsoft Fabric capacity (trial or paid) for the Lakehouse and report
+- Power BI Desktop (Windows) for the `.pbix` file
 
 ### 1. Set up the pipeline
 
@@ -294,7 +319,14 @@ dbt docs generate && dbt docs serve    # optional: lineage graph
 
 To run it in production, upload the project to the Databricks workspace and add a **dbt** task to the job, with the command `dbt build`, catalog `banking` and schema `gold`.
 
-### 3. Open the Power BI report
+### 3. Set up Microsoft Fabric
+
+1. In a Fabric workspace on a Fabric capacity, create a **Lakehouse** named `neobank_lakehouse`.
+2. Create a **Dataflow Gen2**, connect it to the Databricks SQL warehouse with the **Azure Databricks** connector (server hostname, HTTP path, personal access token), and select the four aggregate Gold tables.
+3. Set each query's data destination to the Lakehouse (new table, replace on refresh), publish, and schedule a daily refresh after the Databricks job.
+4. From the Lakehouse, create a **New semantic model** with the four tables and build the report on it.
+
+### 4. Open the Power BI Desktop file
 
 Open `powerbi/NeoBank_Gold_Report.pbix` in Power BI Desktop. When prompted, sign in to Azure Databricks with a personal access token, then click **Refresh**.
 
@@ -305,7 +337,7 @@ Open `powerbi/NeoBank_Gold_Report.pbix` in Power BI Desktop. When prompted, sign
 - **`daily_bank_kpi` mixes daily and current values.** Transaction metrics are per day, but customer, balance and credit metrics are current totals repeated on every date. A proper daily snapshot table would fix this.
 - **Gold runs don't write to the audit log.** dbt keeps its own run results, so the email report covers Bronze and Silver only. A dbt `on-run-end` hook could write Gold results into `pipeline_runs`.
 - **Streaming ingestion.** A planned extension is a Kafka source (for example, real-time card transactions) feeding a new Bronze and Silver table through Structured Streaming.
-- **Microsoft Fabric.** A Fabric Lakehouse fed by Dataflow Gen2 is designed and ready to add once a Fabric capacity is available.
+- **Fabric runs on a trial capacity.** The Fabric workspace uses a 60-day trial; keeping it long term would need a paid Fabric capacity (F2 or larger), which can be paused when idle.
 
 ---
 
@@ -319,5 +351,6 @@ Open `powerbi/NeoBank_Gold_Report.pbix` in Power BI Desktop. When prompted, sign
 | Analytics engineering | dbt models, sources, data tests, lineage, dev/prod environments |
 | Orchestration | Databricks Workflows, For Each tasks, task values, dbt tasks |
 | Governance and security | Unity Catalog, PII masking, row-level security, secret scopes, credentials kept out of source control |
-| BI and AI | AI/BI dashboards, Genie, Power BI Desktop and service, scheduled refresh |
+| Microsoft Fabric | Lakehouse, Dataflow Gen2 with the Azure Databricks connector, SQL analytics endpoint (T-SQL), Direct Lake semantic model |
+| BI and AI | AI/BI dashboards, Genie, Power BI (Fabric and Desktop), scheduled refresh |
 | Python | Orchestration logic, token handling, HTML email reports with `smtplib` |
