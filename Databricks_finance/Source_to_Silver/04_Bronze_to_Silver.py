@@ -79,6 +79,9 @@ try:
     # -----------------------------------------
 
     bronze_df = spark.table(bronze_table)
+    if load_type == "FULL":
+        latest_load = bronze_df.agg(spark_max("insert_timestamp")).collect()[0][0]
+        bronze_df = bronze_df.filter(col("insert_timestamp") == latest_load)
 
     if load_type in ["APPEND", "MERGE"] and watermark_column:
 
