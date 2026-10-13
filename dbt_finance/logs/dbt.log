@@ -1,0 +1,1658 @@
+[0m21:37:13.137856 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014BD912C350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014BD9854D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014BD9856600>]}
+
+
+============================== 21:37:13.146774 | e5c2beca-05df-4a63-ac0a-779a30378507 ==============================
+[0m21:37:13.146774 [info ] [MainThread]: Running with dbt=1.12.5
+[0m21:37:13.146774 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Dense\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt debug', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'C:\\Users\\Dense\\OneDrive\\Documents\\Databricks_finance_data\\dbt_finance\\logs'}
+[0m21:37:13.232790 [info ] [MainThread]: dbt version: 1.12.5
+[0m21:37:13.232790 [info ] [MainThread]: python version: 3.12.10
+[0m21:37:13.235348 [info ] [MainThread]: python path: C:\Users\Dense\AppData\Local\Programs\Python\Python312\python.exe
+[0m21:37:13.237383 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m21:37:13.239415 [info ] [MainThread]: Using profiles dir at C:\Users\Dense\.dbt
+[0m21:37:13.241185 [info ] [MainThread]: Using profiles.yml file at C:\Users\Dense\.dbt\profiles.yml
+[0m21:37:13.243211 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Dense\OneDrive\Documents\Databricks_finance_data\dbt_finance\dbt_project.yml
+[0m21:37:13.644458 [info ] [MainThread]: Configuration:
+[0m21:37:13.644458 [info ] [MainThread]:   profiles.yml file [[31mERROR not found[0m]
+[0m21:37:13.644458 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:37:13.644458 [info ] [MainThread]: Required dependencies:
+[0m21:37:13.644458 [debug] [MainThread]: Executing "git --help"
+[0m21:37:13.755877 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m21:37:13.755877 [debug] [MainThread]: STDERR: "b''"
+[0m21:37:13.755877 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m21:37:13.761615 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m21:37:13.761615 [info ] [MainThread]: [31m1 check failed:[0m
+[0m21:37:13.761615 [info ] [MainThread]: dbt looked for a profiles.yml file in C:\Users\Dense\.dbt\profiles.yml, but did
+not find one. For more information on configuring your profile, consult the
+documentation:
+
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m21:37:13.761615 [debug] [MainThread]: Command `dbt debug` failed at 21:37:13.761615 after 0.93 seconds
+[0m21:37:13.761615 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014BD912C350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014BDB5E2030>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014BDB2B4830>]}
+[0m21:37:13.766591 [debug] [MainThread]: Flushing usage events
+[0m21:37:14.997703 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:46:37.482033 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000292EBE75A90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000292E83F08C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000292E80249B0>]}
+
+
+============================== 21:46:37.514049 | 2928a7a9-6731-4f17-88be-4bef360d2bb9 ==============================
+[0m21:46:37.514049 [info ] [MainThread]: Running with dbt=1.12.5
+[0m21:46:37.518944 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Dense\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'invocation_command': 'dbt debug', 'log_path': 'C:\\Users\\Dense\\OneDrive\\Documents\\Databricks_finance_data\\dbt_finance\\logs'}
+[0m21:46:37.684400 [info ] [MainThread]: dbt version: 1.12.5
+[0m21:46:37.692816 [info ] [MainThread]: python version: 3.12.10
+[0m21:46:37.700977 [info ] [MainThread]: python path: C:\Users\Dense\AppData\Local\Programs\Python\Python312\python.exe
+[0m21:46:37.714115 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m21:46:42.938730 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m21:46:42.947929 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m21:46:42.947929 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m21:46:47.451657 [info ] [MainThread]: Using profiles dir at C:\Users\Dense\.dbt
+[0m21:46:47.467582 [info ] [MainThread]: Using profiles.yml file at C:\Users\Dense\.dbt\profiles.yml
+[0m21:46:47.467582 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Dense\OneDrive\Documents\Databricks_finance_data\dbt_finance\dbt_project.yml
+[0m21:46:47.470863 [info ] [MainThread]: adapter type: databricks
+[0m21:46:47.471978 [info ] [MainThread]: adapter version: 1.12.7
+[0m21:46:48.328568 [info ] [MainThread]: Configuration:
+[0m21:46:48.328568 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:46:48.334225 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:46:48.334225 [info ] [MainThread]: Required dependencies:
+[0m21:46:48.334225 [debug] [MainThread]: Executing "git --help"
+[0m21:46:48.499266 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m21:46:48.504331 [debug] [MainThread]: STDERR: "b''"
+[0m21:46:48.505164 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m21:46:48.505164 [info ] [MainThread]: Connection:
+[0m21:46:48.505164 [info ] [MainThread]:   host: adb-7405607074015400.0.azuredatabricks.net
+[0m21:46:48.511369 [info ] [MainThread]:   http_path: /sql/1.0/warehouses/ef39aba5c40acd01
+[0m21:46:48.511369 [info ] [MainThread]:   catalog: banking
+[0m21:46:48.513189 [info ] [MainThread]:   schema: gold_dbt
+[0m21:46:48.513189 [info ] [MainThread]: Registered adapter: databricks=1.12.7
+[0m21:46:51.144349 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=debug) - Creating connection
+[0m21:46:51.155136 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m21:46:53.391882 [info ] [MainThread]: Databricks adapter:   SPOG host (host_type='workspace'): no
+[0m21:46:53.394571 [info ] [MainThread]: Databricks adapter:   workspace_id (from ?o= in http_path): None
+[0m21:46:53.397226 [info ] [MainThread]: Databricks adapter:   databricks-sql-connector version: 4.4.0 (supported)
+[0m21:46:53.399263 [info ] [MainThread]: Databricks adapter:   databricks-sdk version: 0.117.0 (supported)
+[0m21:46:53.399573 [debug] [MainThread]: Using databricks connection "debug"
+[0m21:46:53.399573 [debug] [MainThread]: On debug: select 1 as id
+[0m21:46:53.403291 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:46:57.188329 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f1c67e-0f94-11b9-bc4d-820a31f71dbc) - Created
+[0m21:47:03.413413 [debug] [MainThread]: SQL status: OK in 10.010 seconds
+[0m21:47:03.413413 [debug] [MainThread]: Databricks adapter: Cursor(session-id=01f1c67e-0f94-11b9-bc4d-820a31f71dbc, command-id=01f1c67e-1080-15a8-9399-e4768431f476) - Closing
+[0m21:47:03.764847 [debug] [MainThread]: On debug: Close
+[0m21:47:03.764847 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f1c67e-0f94-11b9-bc4d-820a31f71dbc) - Closing
+[0m21:47:04.020917 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m21:47:04.020917 [info ] [MainThread]: [32mAll checks passed![0m
+[0m21:47:04.020917 [debug] [MainThread]: Command `dbt debug` succeeded at 21:47:04.020917 after 26.93 seconds
+[0m21:47:04.020917 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000292E9E771A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000292E9E75760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000292FF23BA40>]}
+[0m21:47:04.025610 [debug] [MainThread]: Flushing usage events
+[0m21:47:04.870865 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:11:51.208173 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018093A969C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018093A94DA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018091CE0DD0>]}
+
+
+============================== 22:11:51.240330 | 992fd4e9-6929-4c51-958b-9dd6bcc3396e ==============================
+[0m22:11:51.240330 [info ] [MainThread]: Running with dbt=1.12.5
+[0m22:11:51.240330 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Dense\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt parse', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Users\\Dense\\OneDrive\\Documents\\Databricks_finance_data\\dbt_finance\\logs'}
+[0m22:11:56.593142 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m22:11:56.593142 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m22:11:56.593142 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m22:12:02.317698 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '992fd4e9-6929-4c51-958b-9dd6bcc3396e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000180B78BD160>]}
+[0m22:12:02.779814 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '992fd4e9-6929-4c51-958b-9dd6bcc3396e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000180916BF680>]}
+[0m22:12:02.779814 [info ] [MainThread]: Registered adapter: databricks=1.12.7
+[0m22:12:05.533561 [debug] [MainThread]: checksum: 331e93410bbea94870da9acf32ff0bb501848323dce5fa75a919d32d912375a9, vars: {}, profile: dbt_finance, target: dev, version: 1.12.5
+[0m22:12:05.535684 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m22:12:05.535684 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '992fd4e9-6929-4c51-958b-9dd6bcc3396e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018093B0C9B0>]}
+[0m22:12:09.658480 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '992fd4e9-6929-4c51-958b-9dd6bcc3396e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000180B9476570>]}
+[0m22:12:09.674415 [info ] [MainThread]: Performance info: C:\Users\Dense\OneDrive\Documents\Databricks_finance_data\dbt_finance\target\perf_info.json
+[0m22:12:10.335236 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Dense\OneDrive\Documents\Databricks_finance_data\dbt_finance\target\manifest.json
+[0m22:12:10.367474 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Dense\OneDrive\Documents\Databricks_finance_data\dbt_finance\target\semantic_manifest.json
+[0m22:12:10.568478 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\Dense\OneDrive\Documents\Databricks_finance_data\dbt_finance\target\osi_document.json
+[0m22:12:10.575651 [debug] [MainThread]: Command `dbt parse` succeeded at 22:12:10.575651 after 20.04 seconds
+[0m22:12:10.575651 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018091F08A40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000180B95178F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001809177E000>]}
+[0m22:12:10.575651 [debug] [MainThread]: Flushing usage events
+[0m22:12:13.121769 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:14:16.780261 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026DE02C5340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026DE0CDD760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026DE0A89A30>]}
+
+
+============================== 22:14:16.780261 | 77d5e10f-41fe-429b-bc18-da874b67d4c4 ==============================
+[0m22:14:16.780261 [info ] [MainThread]: Running with dbt=1.12.5
+[0m22:14:16.780261 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Dense\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt build', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Users\\Dense\\OneDrive\\Documents\\Databricks_finance_data\\dbt_finance\\logs'}
+[0m22:14:18.260454 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m22:14:18.260454 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m22:14:18.260454 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m22:14:19.635070 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '77d5e10f-41fe-429b-bc18-da874b67d4c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026D8609E930>]}
+[0m22:14:19.741814 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '77d5e10f-41fe-429b-bc18-da874b67d4c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026DE29F45C0>]}
+[0m22:14:19.741814 [info ] [MainThread]: Registered adapter: databricks=1.12.7
+[0m22:14:20.227795 [debug] [MainThread]: checksum: 331e93410bbea94870da9acf32ff0bb501848323dce5fa75a919d32d912375a9, vars: {}, profile: dbt_finance, target: dev, version: 1.12.5
+[0m22:14:20.434147 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:14:20.434147 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m22:14:20.434147 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:14:20.449977 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '77d5e10f-41fe-429b-bc18-da874b67d4c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026D865A9370>]}
+[0m22:14:20.625884 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Dense\OneDrive\Documents\Databricks_finance_data\dbt_finance\target\manifest.json
+[0m22:14:20.625884 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Dense\OneDrive\Documents\Databricks_finance_data\dbt_finance\target\semantic_manifest.json
+[0m22:14:20.659682 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\Dense\OneDrive\Documents\Databricks_finance_data\dbt_finance\target\osi_document.json
+[0m22:14:20.705858 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '77d5e10f-41fe-429b-bc18-da874b67d4c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026D8722E540>]}
+[0m22:14:20.705858 [info ] [MainThread]: Found 5 models, 15 data tests, 6 sources, 776 macros
+[0m22:14:20.713562 [info ] [MainThread]: 
+[0m22:14:20.713562 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:14:20.713562 [info ] [MainThread]: 
+[0m22:14:20.717989 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m22:14:20.717989 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m22:14:20.732842 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_banking) - Creating connection
+[0m22:14:20.732842 [debug] [ThreadPool]: Acquiring new databricks connection 'list_banking'
+[0m22:14:20.747055 [debug] [ThreadPool]: Using databricks connection "list_banking"
+[0m22:14:20.747055 [debug] [ThreadPool]: On list_banking: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "77d5e10f-41fe-429b-bc18-da874b67d4c4", "connection_name": "list_banking"} */
+
+    
+
+  SHOW SCHEMAS IN `banking`
+
+
+  
+[0m22:14:20.747055 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:14:25.348000 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f1c681-e637-1ff4-82f0-0804e2b552a9) - Created
+[0m22:14:31.561474 [debug] [ThreadPool]: SQL status: OK in 10.810 seconds
+[0m22:14:31.592827 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f1c681-e637-1ff4-82f0-0804e2b552a9, command-id=01f1c681-e6de-1b33-9486-709862bbabc6) - Closing
+[0m22:14:31.855071 [debug] [ThreadPool]: On list_banking: Close
+[0m22:14:31.863690 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f1c681-e637-1ff4-82f0-0804e2b552a9) - Closing
+[0m22:14:32.088272 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=create_banking_gold_dbt) - Creating connection
+[0m22:14:32.088272 [debug] [ThreadPool]: Acquiring new databricks connection 'create_banking_gold_dbt'
+[0m22:14:32.088272 [debug] [ThreadPool]: Creating schema "database: "banking"
+schema: "gold_dbt"
+"
+[0m22:14:32.088272 [debug] [ThreadPool]: Using databricks connection "create_banking_gold_dbt"
+[0m22:14:32.088272 [debug] [ThreadPool]: On create_banking_gold_dbt: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "77d5e10f-41fe-429b-bc18-da874b67d4c4", "connection_name": "create_banking_gold_dbt"} */
+create schema if not exists `banking`.`gold_dbt`
+  
+[0m22:14:32.088272 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:14:32.994830 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f1c681-eb43-1408-b374-4c9d163b1ee9) - Created
+[0m22:14:33.765912 [debug] [ThreadPool]: SQL status: OK in 1.680 seconds
+[0m22:14:33.765912 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f1c681-eb43-1408-b374-4c9d163b1ee9, command-id=01f1c681-eb6e-196e-9077-5bb766612e76) - Closing
+[0m22:14:33.765912 [debug] [ThreadPool]: On create_banking_gold_dbt: Close
+[0m22:14:33.765912 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f1c681-eb43-1408-b374-4c9d163b1ee9) - Closing
+[0m22:14:34.005286 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_banking_gold_dbt) - Creating connection
+[0m22:14:34.005286 [debug] [ThreadPool]: Acquiring new databricks connection 'list_banking_gold_dbt'
+[0m22:14:34.021426 [debug] [ThreadPool]: Using databricks connection "list_banking_gold_dbt"
+[0m22:14:34.021426 [debug] [ThreadPool]: On list_banking_gold_dbt: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "77d5e10f-41fe-429b-bc18-da874b67d4c4", "connection_name": "list_banking_gold_dbt"} */
+
+    
+SELECT
+  table_name,
+  if(table_type IN ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE', 'EXTERNAL_SHALLOW_CLONE'), 'table', lower(table_type)) AS table_type,
+  lower(data_source_format) AS file_format,
+  table_owner,
+  if(
+    table_type IN (
+      'EXTERNAL',
+      'MANAGED',
+      'MANAGED_SHALLOW_CLONE',
+      'EXTERNAL_SHALLOW_CLONE'
+    ),
+    lower(table_type),
+    NULL
+  ) AS databricks_table_type
+FROM `system`.`information_schema`.`tables`
+WHERE table_catalog = 'banking'
+  AND table_schema = 'gold_dbt'
+
+  
+[0m22:14:34.021426 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:14:34.852318 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f1c681-ec65-1de7-ac2c-e4f3ac85cb3a) - Created
+[0m22:14:36.459925 [debug] [ThreadPool]: SQL status: OK in 2.440 seconds
+[0m22:14:36.459925 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f1c681-ec65-1de7-ac2c-e4f3ac85cb3a, command-id=01f1c681-ec89-1ba3-8c11-66385bc72f35) - Closing
+[0m22:14:36.476018 [debug] [ThreadPool]: On list_banking_gold_dbt: Close
+[0m22:14:36.476018 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f1c681-ec65-1de7-ac2c-e4f3ac85cb3a) - Closing
+[0m22:14:36.715984 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '77d5e10f-41fe-429b-bc18-da874b67d4c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026D86D5FCB0>]}
+[0m22:14:36.731979 [debug] [Thread-4 (]: Began running node model.dbt_finance.risk_customer_summary
+[0m22:14:36.743284 [debug] [Thread-5 (]: Began running node test.dbt_finance.source_not_null_silver_accounts_account_id.273a6cc41b
+[0m22:14:36.743284 [info ] [Thread-4 (]: 1 of 20 START sql table model gold_dbt.risk_customer_summary ................... [RUN]
+[0m22:14:36.743284 [debug] [Thread-6 (]: Began running node test.dbt_finance.source_not_null_silver_branches_branch_code.4d1ac95604
+[0m22:14:36.747104 [debug] [Thread-7 (]: Began running node test.dbt_finance.source_not_null_silver_customers_customer_id.a0f2a5090b
+[0m22:14:36.743284 [info ] [Thread-5 (]: 2 of 20 START test source_not_null_silver_accounts_account_id .................. [RUN]
+[0m22:14:36.747621 [debug] [Thread-4 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.dbt_finance.risk_customer_summary) - Creating connection
+[0m22:14:36.751905 [debug] [Thread-5 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.source_not_null_silver_accounts_account_id.273a6cc41b) - Creating connection
+[0m22:14:36.749886 [info ] [Thread-6 (]: 3 of 20 START test source_not_null_silver_branches_branch_code ................. [RUN]
+[0m22:14:36.754458 [debug] [Thread-4 (]: Acquiring new databricks connection 'model.dbt_finance.risk_customer_summary'
+[0m22:14:36.749886 [info ] [Thread-7 (]: 4 of 20 START test source_not_null_silver_customers_customer_id ................ [RUN]
+[0m22:14:36.758014 [debug] [Thread-6 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.source_not_null_silver_branches_branch_code.4d1ac95604) - Creating connection
+[0m22:14:36.756115 [debug] [Thread-5 (]: Acquiring new databricks connection 'test.dbt_finance.source_not_null_silver_accounts_account_id.273a6cc41b'
+[0m22:14:36.763255 [debug] [Thread-4 (]: Began compiling node model.dbt_finance.risk_customer_summary
+[0m22:14:36.765280 [debug] [Thread-7 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.source_not_null_silver_customers_customer_id.a0f2a5090b) - Creating connection
+[0m22:14:36.765280 [debug] [Thread-6 (]: Acquiring new databricks connection 'test.dbt_finance.source_not_null_silver_branches_branch_code.4d1ac95604'
+[0m22:14:36.767299 [debug] [Thread-5 (]: Began compiling node test.dbt_finance.source_not_null_silver_accounts_account_id.273a6cc41b
+[0m22:14:36.780251 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_finance.risk_customer_summary"
+[0m22:14:36.780251 [debug] [Thread-7 (]: Acquiring new databricks connection 'test.dbt_finance.source_not_null_silver_customers_customer_id.a0f2a5090b'
+[0m22:14:36.780251 [debug] [Thread-6 (]: Began compiling node test.dbt_finance.source_not_null_silver_branches_branch_code.4d1ac95604
+[0m22:14:36.825943 [debug] [Thread-5 (]: Writing injected SQL for node "test.dbt_finance.source_not_null_silver_accounts_account_id.273a6cc41b"
+[0m22:14:36.825943 [debug] [Thread-7 (]: Began compiling node test.dbt_finance.source_not_null_silver_customers_customer_id.a0f2a5090b
+[0m22:14:36.842426 [debug] [Thread-6 (]: Writing injected SQL for node "test.dbt_finance.source_not_null_silver_branches_branch_code.4d1ac95604"
+[0m22:14:36.858009 [debug] [Thread-7 (]: Writing injected SQL for node "test.dbt_finance.source_not_null_silver_customers_customer_id.a0f2a5090b"
+[0m22:14:36.866060 [debug] [Thread-4 (]: Began executing node model.dbt_finance.risk_customer_summary
+[0m22:14:36.899912 [debug] [Thread-4 (]: MATERIALIZING TABLE
+[0m22:14:36.930175 [debug] [Thread-5 (]: Began executing node test.dbt_finance.source_not_null_silver_accounts_account_id.273a6cc41b
+[0m22:14:36.930175 [debug] [Thread-6 (]: Began executing node test.dbt_finance.source_not_null_silver_branches_branch_code.4d1ac95604
+[0m22:14:36.930175 [debug] [Thread-7 (]: Began executing node test.dbt_finance.source_not_null_silver_customers_customer_id.a0f2a5090b
+[0m22:14:37.009759 [debug] [Thread-6 (]: Writing runtime sql for node "test.dbt_finance.source_not_null_silver_branches_branch_code.4d1ac95604"
+[0m22:14:37.009759 [debug] [Thread-5 (]: Writing runtime sql for node "test.dbt_finance.source_not_null_silver_accounts_account_id.273a6cc41b"
+[0m22:14:37.009759 [debug] [Thread-7 (]: Writing runtime sql for node "test.dbt_finance.source_not_null_silver_customers_customer_id.a0f2a5090b"
+[0m22:14:37.025544 [debug] [Thread-4 (]: Using databricks connection "model.dbt_finance.risk_customer_summary"
+[0m22:14:37.025544 [debug] [Thread-4 (]: On model.dbt_finance.risk_customer_summary: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "77d5e10f-41fe-429b-bc18-da874b67d4c4", "node_id": "model.dbt_finance.risk_customer_summary"} */
+SELECT
+    table_catalog,
+    table_schema,
+    table_name,
+    filter_name,
+    target_columns
+  FROM `banking`.`information_schema`.`row_filters`
+  WHERE table_catalog = 'banking'
+    AND table_schema = 'gold_dbt'
+    AND table_name = 'risk_customer_summary'
+[0m22:14:37.025544 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m22:14:37.057191 [debug] [Thread-7 (]: Using databricks connection "test.dbt_finance.source_not_null_silver_customers_customer_id.a0f2a5090b"
+[0m22:14:37.057191 [debug] [Thread-7 (]: On test.dbt_finance.source_not_null_silver_customers_customer_id.a0f2a5090b: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "77d5e10f-41fe-429b-bc18-da874b67d4c4", "node_id": "test.dbt_finance.source_not_null_silver_customers_customer_id.a0f2a5090b"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from `banking`.`silver`.`customers`
+where customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:14:37.057191 [debug] [Thread-7 (]: Opening a new connection, currently in state init
+[0m22:14:37.073267 [debug] [Thread-6 (]: Using databricks connection "test.dbt_finance.source_not_null_silver_branches_branch_code.4d1ac95604"
+[0m22:14:37.073267 [debug] [Thread-6 (]: On test.dbt_finance.source_not_null_silver_branches_branch_code.4d1ac95604: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "77d5e10f-41fe-429b-bc18-da874b67d4c4", "node_id": "test.dbt_finance.source_not_null_silver_branches_branch_code.4d1ac95604"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select branch_code
+from `banking`.`silver`.`branches`
+where branch_code is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:14:37.073267 [debug] [Thread-6 (]: Opening a new connection, currently in state init
+[0m22:14:37.089021 [debug] [Thread-5 (]: Using databricks connection "test.dbt_finance.source_not_null_silver_accounts_account_id.273a6cc41b"
+[0m22:14:37.089021 [debug] [Thread-5 (]: On test.dbt_finance.source_not_null_silver_accounts_account_id.273a6cc41b: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "77d5e10f-41fe-429b-bc18-da874b67d4c4", "node_id": "test.dbt_finance.source_not_null_silver_accounts_account_id.273a6cc41b"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select account_id
+from `banking`.`silver`.`accounts`
+where account_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:14:37.105123 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m22:14:37.909626 [debug] [Thread-4 (]: Databricks adapter: Connection(session-id=01f1c681-ee37-149d-b9da-749ed37d8e45) - Created
+[0m22:14:37.977697 [debug] [Thread-5 (]: Databricks adapter: Connection(session-id=01f1c681-ee47-12f5-84d5-6168fed7d6fa) - Created
+[0m22:14:37.993725 [debug] [Thread-6 (]: Databricks adapter: Connection(session-id=01f1c681-ee45-1a3f-9eca-9f8773be0577) - Created
+[0m22:14:37.993725 [debug] [Thread-7 (]: Databricks adapter: Connection(session-id=01f1c681-ee46-1874-8e31-22bc2bc1d0a6) - Created
+[0m22:14:38.743901 [debug] [Thread-4 (]: SQL status: OK in 1.720 seconds
+[0m22:14:38.747940 [debug] [Thread-4 (]: Databricks adapter: Cursor(session-id=01f1c681-ee37-149d-b9da-749ed37d8e45, command-id=01f1c681-ee5b-10ea-bb07-cf4dee1136ec) - Closing
+[0m22:14:38.785626 [debug] [Thread-4 (]: Writing runtime sql for node "model.dbt_finance.risk_customer_summary"
+[0m22:14:38.785626 [debug] [Thread-4 (]: Using databricks connection "model.dbt_finance.risk_customer_summary"
+[0m22:14:38.785626 [debug] [Thread-4 (]: On model.dbt_finance.risk_customer_summary: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "77d5e10f-41fe-429b-bc18-da874b67d4c4", "node_id": "model.dbt_finance.risk_customer_summary"} */
+
+  
+    
+        create or replace table `banking`.`gold_dbt`.`risk_customer_summary`
+      
+      
+    using delta
+  
+      
+      
+      
+      
+      
+      
+      
+      
+      as
+      SELECT
+    risk_grade,
+    COUNT(customer_id) AS total_customers,
+    AVG(TRY_CAST(credit_score AS DOUBLE)) AS avg_credit_score,
+    SUM(TRY_CAST(external_active_loans AS INT)) AS total_external_loans,
+    SUM(TRY_CAST(external_overdue_amount AS DECIMAL(18, 2))) AS total_overdue_amount
+FROM `banking`.`silver`.`credit_bureau_reports`
+GROUP BY risk_grade
+  
+[0m22:14:41.699269 [debug] [Thread-6 (]: SQL status: OK in 4.630 seconds
+[0m22:14:41.699269 [debug] [Thread-7 (]: SQL status: OK in 4.640 seconds
+[0m22:14:41.707587 [debug] [Thread-7 (]: Databricks adapter: Cursor(session-id=01f1c681-ee46-1874-8e31-22bc2bc1d0a6, command-id=01f1c681-ee6a-1e91-b637-92ce808013a5) - Closing
+[0m22:14:41.707587 [debug] [Thread-7 (]: On test.dbt_finance.source_not_null_silver_customers_customer_id.a0f2a5090b: Close
+[0m22:14:41.707587 [debug] [Thread-7 (]: Databricks adapter: Connection(session-id=01f1c681-ee46-1874-8e31-22bc2bc1d0a6) - Closing
+[0m22:14:41.707587 [debug] [Thread-6 (]: Databricks adapter: Cursor(session-id=01f1c681-ee45-1a3f-9eca-9f8773be0577, command-id=01f1c681-ee6a-1226-93ca-fb021504b027) - Closing
+[0m22:14:41.707587 [debug] [Thread-6 (]: On test.dbt_finance.source_not_null_silver_branches_branch_code.4d1ac95604: Close
+[0m22:14:41.707587 [debug] [Thread-6 (]: Databricks adapter: Connection(session-id=01f1c681-ee45-1a3f-9eca-9f8773be0577) - Closing
+[0m22:14:41.707587 [debug] [Thread-5 (]: SQL status: OK in 4.600 seconds
+[0m22:14:41.707587 [debug] [Thread-5 (]: Databricks adapter: Cursor(session-id=01f1c681-ee47-12f5-84d5-6168fed7d6fa, command-id=01f1c681-ee67-1479-acea-89c571264cf8) - Closing
+[0m22:14:41.707587 [debug] [Thread-5 (]: On test.dbt_finance.source_not_null_silver_accounts_account_id.273a6cc41b: Close
+[0m22:14:41.723485 [debug] [Thread-5 (]: Databricks adapter: Connection(session-id=01f1c681-ee47-12f5-84d5-6168fed7d6fa) - Closing
+[0m22:14:41.943956 [info ] [Thread-7 (]: 4 of 20 PASS source_not_null_silver_customers_customer_id ...................... [[32mPASS[0m in 5.18s]
+[0m22:14:41.946036 [debug] [Thread-7 (]: Finished running node test.dbt_finance.source_not_null_silver_customers_customer_id.a0f2a5090b
+[0m22:14:41.946504 [debug] [Thread-7 (]: Began running node test.dbt_finance.source_not_null_silver_transactions_txn_id.694f448e97
+[0m22:14:41.946504 [info ] [Thread-7 (]: 5 of 20 START test source_not_null_silver_transactions_txn_id .................. [RUN]
+[0m22:14:41.946504 [debug] [Thread-7 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.source_not_null_silver_transactions_txn_id.694f448e97) - Creating connection
+[0m22:14:41.946504 [debug] [Thread-7 (]: Acquiring new databricks connection 'test.dbt_finance.source_not_null_silver_transactions_txn_id.694f448e97'
+[0m22:14:41.946504 [debug] [Thread-7 (]: Began compiling node test.dbt_finance.source_not_null_silver_transactions_txn_id.694f448e97
+[0m22:14:41.963865 [debug] [Thread-7 (]: Writing injected SQL for node "test.dbt_finance.source_not_null_silver_transactions_txn_id.694f448e97"
+[0m22:14:41.961980 [info ] [Thread-6 (]: 3 of 20 PASS source_not_null_silver_branches_branch_code ....................... [[32mPASS[0m in 5.20s]
+[0m22:14:41.965827 [debug] [Thread-6 (]: Finished running node test.dbt_finance.source_not_null_silver_branches_branch_code.4d1ac95604
+[0m22:14:41.965827 [debug] [Thread-6 (]: Began running node test.dbt_finance.source_unique_silver_accounts_account_id.c8bc709a79
+[0m22:14:41.966958 [info ] [Thread-6 (]: 6 of 20 START test source_unique_silver_accounts_account_id .................... [RUN]
+[0m22:14:41.967751 [debug] [Thread-6 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.source_unique_silver_accounts_account_id.c8bc709a79) - Creating connection
+[0m22:14:41.967751 [debug] [Thread-6 (]: Acquiring new databricks connection 'test.dbt_finance.source_unique_silver_accounts_account_id.c8bc709a79'
+[0m22:14:41.973218 [debug] [Thread-6 (]: Began compiling node test.dbt_finance.source_unique_silver_accounts_account_id.c8bc709a79
+[0m22:14:41.970552 [info ] [Thread-5 (]: 2 of 20 PASS source_not_null_silver_accounts_account_id ........................ [[32mPASS[0m in 5.22s]
+[0m22:14:41.973780 [debug] [Thread-7 (]: Began executing node test.dbt_finance.source_not_null_silver_transactions_txn_id.694f448e97
+[0m22:14:41.996453 [debug] [Thread-6 (]: Writing injected SQL for node "test.dbt_finance.source_unique_silver_accounts_account_id.c8bc709a79"
+[0m22:14:41.996453 [debug] [Thread-5 (]: Finished running node test.dbt_finance.source_not_null_silver_accounts_account_id.273a6cc41b
+[0m22:14:41.999999 [debug] [Thread-7 (]: Writing runtime sql for node "test.dbt_finance.source_not_null_silver_transactions_txn_id.694f448e97"
+[0m22:14:41.999999 [debug] [Thread-5 (]: Began running node test.dbt_finance.source_unique_silver_branches_branch_code.d51cecfa79
+[0m22:14:41.999999 [info ] [Thread-5 (]: 7 of 20 START test source_unique_silver_branches_branch_code ................... [RUN]
+[0m22:14:42.005710 [debug] [Thread-5 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.source_unique_silver_branches_branch_code.d51cecfa79) - Creating connection
+[0m22:14:42.005710 [debug] [Thread-5 (]: Acquiring new databricks connection 'test.dbt_finance.source_unique_silver_branches_branch_code.d51cecfa79'
+[0m22:14:42.007681 [debug] [Thread-5 (]: Began compiling node test.dbt_finance.source_unique_silver_branches_branch_code.d51cecfa79
+[0m22:14:42.007681 [debug] [Thread-6 (]: Began executing node test.dbt_finance.source_unique_silver_accounts_account_id.c8bc709a79
+[0m22:14:42.020399 [debug] [Thread-7 (]: Using databricks connection "test.dbt_finance.source_not_null_silver_transactions_txn_id.694f448e97"
+[0m22:14:42.020399 [debug] [Thread-5 (]: Writing injected SQL for node "test.dbt_finance.source_unique_silver_branches_branch_code.d51cecfa79"
+[0m22:14:42.020399 [debug] [Thread-6 (]: Writing runtime sql for node "test.dbt_finance.source_unique_silver_accounts_account_id.c8bc709a79"
+[0m22:14:42.028722 [debug] [Thread-7 (]: On test.dbt_finance.source_not_null_silver_transactions_txn_id.694f448e97: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "77d5e10f-41fe-429b-bc18-da874b67d4c4", "node_id": "test.dbt_finance.source_not_null_silver_transactions_txn_id.694f448e97"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select txn_id
+from `banking`.`silver`.`transactions`
+where txn_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:14:42.029788 [debug] [Thread-7 (]: Opening a new connection, currently in state init
+[0m22:14:42.029788 [debug] [Thread-6 (]: Using databricks connection "test.dbt_finance.source_unique_silver_accounts_account_id.c8bc709a79"
+[0m22:14:42.033507 [debug] [Thread-5 (]: Began executing node test.dbt_finance.source_unique_silver_branches_branch_code.d51cecfa79
+[0m22:14:42.033507 [debug] [Thread-6 (]: On test.dbt_finance.source_unique_silver_accounts_account_id.c8bc709a79: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "77d5e10f-41fe-429b-bc18-da874b67d4c4", "node_id": "test.dbt_finance.source_unique_silver_accounts_account_id.c8bc709a79"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    account_id as unique_field,
+    count(*) as n_records
+
+from `banking`.`silver`.`accounts`
+where account_id is not null
+group by account_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:14:42.037921 [debug] [Thread-5 (]: Writing runtime sql for node "test.dbt_finance.source_unique_silver_branches_branch_code.d51cecfa79"
+[0m22:14:42.039937 [debug] [Thread-6 (]: Opening a new connection, currently in state init
+[0m22:14:42.059917 [debug] [Thread-5 (]: Using databricks connection "test.dbt_finance.source_unique_silver_branches_branch_code.d51cecfa79"
+[0m22:14:42.059917 [debug] [Thread-5 (]: On test.dbt_finance.source_unique_silver_branches_branch_code.d51cecfa79: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "77d5e10f-41fe-429b-bc18-da874b67d4c4", "node_id": "test.dbt_finance.source_unique_silver_branches_branch_code.d51cecfa79"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    branch_code as unique_field,
+    count(*) as n_records
+
+from `banking`.`silver`.`branches`
+where branch_code is not null
+group by branch_code
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:14:42.059917 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m22:14:43.438498 [debug] [Thread-5 (]: Databricks adapter: Connection(session-id=01f1c681-f187-1d4a-9970-430272bd5640) - Created
+[0m22:14:43.454349 [debug] [Thread-6 (]: Databricks adapter: Connection(session-id=01f1c681-f188-1155-ab22-299aae995278) - Created
+[0m22:14:43.454349 [debug] [Thread-7 (]: Databricks adapter: Connection(session-id=01f1c681-f188-125a-b85c-9205aa46c943) - Created
+[0m22:14:44.669067 [debug] [Thread-7 (]: SQL status: OK in 2.640 seconds
+[0m22:14:44.676790 [debug] [Thread-7 (]: Databricks adapter: Cursor(session-id=01f1c681-f188-125a-b85c-9205aa46c943, command-id=01f1c681-f1aa-1a63-95da-83b0eea5bde7) - Closing
+[0m22:14:44.676790 [debug] [Thread-7 (]: On test.dbt_finance.source_not_null_silver_transactions_txn_id.694f448e97: Close
+[0m22:14:44.676790 [debug] [Thread-7 (]: Databricks adapter: Connection(session-id=01f1c681-f188-125a-b85c-9205aa46c943) - Closing
+[0m22:14:44.915065 [info ] [Thread-7 (]: 5 of 20 PASS source_not_null_silver_transactions_txn_id ........................ [[32mPASS[0m in 2.97s]
+[0m22:14:44.930883 [debug] [Thread-7 (]: Finished running node test.dbt_finance.source_not_null_silver_transactions_txn_id.694f448e97
+[0m22:14:44.930883 [debug] [Thread-7 (]: Began running node test.dbt_finance.source_unique_silver_customers_customer_id.9171277f53
+[0m22:14:44.930883 [info ] [Thread-7 (]: 8 of 20 START test source_unique_silver_customers_customer_id .................. [RUN]
+[0m22:14:44.933850 [debug] [Thread-7 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.source_unique_silver_customers_customer_id.9171277f53) - Creating connection
+[0m22:14:44.933850 [debug] [Thread-7 (]: Acquiring new databricks connection 'test.dbt_finance.source_unique_silver_customers_customer_id.9171277f53'
+[0m22:14:44.933850 [debug] [Thread-7 (]: Began compiling node test.dbt_finance.source_unique_silver_customers_customer_id.9171277f53
+[0m22:14:44.948355 [debug] [Thread-7 (]: Writing injected SQL for node "test.dbt_finance.source_unique_silver_customers_customer_id.9171277f53"
+[0m22:14:44.948355 [debug] [Thread-7 (]: Began executing node test.dbt_finance.source_unique_silver_customers_customer_id.9171277f53
+[0m22:14:44.948355 [debug] [Thread-7 (]: Writing runtime sql for node "test.dbt_finance.source_unique_silver_customers_customer_id.9171277f53"
+[0m22:14:44.955171 [debug] [Thread-7 (]: Using databricks connection "test.dbt_finance.source_unique_silver_customers_customer_id.9171277f53"
+[0m22:14:44.955171 [debug] [Thread-7 (]: On test.dbt_finance.source_unique_silver_customers_customer_id.9171277f53: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "77d5e10f-41fe-429b-bc18-da874b67d4c4", "node_id": "test.dbt_finance.source_unique_silver_customers_customer_id.9171277f53"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    customer_id as unique_field,
+    count(*) as n_records
+
+from `banking`.`silver`.`customers`
+where customer_id is not null
+group by customer_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:14:44.955171 [debug] [Thread-7 (]: Opening a new connection, currently in state init
+[0m22:14:45.918710 [debug] [Thread-7 (]: Databricks adapter: Connection(session-id=01f1c681-f300-1d9e-870e-f76384ae2243) - Created
+[0m22:14:50.672340 [debug] [Thread-7 (]: SQL status: OK in 5.720 seconds
+[0m22:14:50.674345 [debug] [Thread-7 (]: Databricks adapter: Cursor(session-id=01f1c681-f300-1d9e-870e-f76384ae2243, command-id=01f1c681-f323-18c6-ade0-9fcfd23a09e5) - Closing
+[0m22:14:50.674345 [debug] [Thread-7 (]: On test.dbt_finance.source_unique_silver_customers_customer_id.9171277f53: Close
+[0m22:14:50.676349 [debug] [Thread-7 (]: Databricks adapter: Connection(session-id=01f1c681-f300-1d9e-870e-f76384ae2243) - Closing
+[0m22:14:50.890231 [debug] [Thread-5 (]: SQL status: OK in 8.830 seconds
+[0m22:14:50.892240 [debug] [Thread-5 (]: Databricks adapter: Cursor(session-id=01f1c681-f187-1d4a-9970-430272bd5640, command-id=01f1c681-f1a8-1746-ae5c-3bc9c0ca35f7) - Closing
+[0m22:14:50.914548 [info ] [Thread-7 (]: 8 of 20 PASS source_unique_silver_customers_customer_id ........................ [[32mPASS[0m in 5.98s]
+[0m22:14:50.923151 [debug] [Thread-7 (]: Finished running node test.dbt_finance.source_unique_silver_customers_customer_id.9171277f53
+[0m22:14:50.923151 [debug] [Thread-7 (]: Began running node test.dbt_finance.source_unique_silver_transactions_txn_id.78d2023c8e
+[0m22:14:50.923151 [info ] [Thread-7 (]: 9 of 20 START test source_unique_silver_transactions_txn_id .................... [RUN]
+[0m22:14:50.923151 [debug] [Thread-7 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.source_unique_silver_transactions_txn_id.78d2023c8e) - Creating connection
+[0m22:14:50.923151 [debug] [Thread-7 (]: Acquiring new databricks connection 'test.dbt_finance.source_unique_silver_transactions_txn_id.78d2023c8e'
+[0m22:14:50.923151 [debug] [Thread-7 (]: Began compiling node test.dbt_finance.source_unique_silver_transactions_txn_id.78d2023c8e
+[0m22:14:50.954246 [debug] [Thread-7 (]: Writing injected SQL for node "test.dbt_finance.source_unique_silver_transactions_txn_id.78d2023c8e"
+[0m22:14:50.957300 [debug] [Thread-7 (]: Began executing node test.dbt_finance.source_unique_silver_transactions_txn_id.78d2023c8e
+[0m22:14:50.963656 [debug] [Thread-7 (]: Writing runtime sql for node "test.dbt_finance.source_unique_silver_transactions_txn_id.78d2023c8e"
+[0m22:14:50.963656 [debug] [Thread-7 (]: Using databricks connection "test.dbt_finance.source_unique_silver_transactions_txn_id.78d2023c8e"
+[0m22:14:50.969946 [debug] [Thread-7 (]: On test.dbt_finance.source_unique_silver_transactions_txn_id.78d2023c8e: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "77d5e10f-41fe-429b-bc18-da874b67d4c4", "node_id": "test.dbt_finance.source_unique_silver_transactions_txn_id.78d2023c8e"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    txn_id as unique_field,
+    count(*) as n_records
+
+from `banking`.`silver`.`transactions`
+where txn_id is not null
+group by txn_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:14:50.970846 [debug] [Thread-7 (]: Opening a new connection, currently in state init
+[0m22:14:51.132961 [debug] [Thread-6 (]: SQL status: OK in 9.090 seconds
+[0m22:14:51.136984 [debug] [Thread-6 (]: Databricks adapter: Cursor(session-id=01f1c681-f188-1155-ab22-299aae995278, command-id=01f1c681-f1a9-1845-9ffe-d4290bcfd0ad) - Closing
+[0m22:14:51.156469 [debug] [Thread-5 (]: On test.dbt_finance.source_unique_silver_branches_branch_code.d51cecfa79: Close
+[0m22:14:51.156469 [debug] [Thread-5 (]: Databricks adapter: Connection(session-id=01f1c681-f187-1d4a-9970-430272bd5640) - Closing
+[0m22:14:51.393068 [info ] [Thread-5 (]: 7 of 20 PASS source_unique_silver_branches_branch_code ......................... [[32mPASS[0m in 9.38s]
+[0m22:14:51.393068 [debug] [Thread-5 (]: Finished running node test.dbt_finance.source_unique_silver_branches_branch_code.d51cecfa79
+[0m22:14:51.393068 [debug] [Thread-6 (]: On test.dbt_finance.source_unique_silver_accounts_account_id.c8bc709a79: Close
+[0m22:14:51.393068 [debug] [Thread-6 (]: Databricks adapter: Connection(session-id=01f1c681-f188-1155-ab22-299aae995278) - Closing
+[0m22:14:51.645233 [warn ] [Thread-6 (]: 6 of 20 WARN 4500 source_unique_silver_accounts_account_id ..................... [[33mWARN 4500[0m in 9.68s]
+[0m22:14:51.645233 [debug] [Thread-6 (]: Finished running node test.dbt_finance.source_unique_silver_accounts_account_id.c8bc709a79
+[0m22:14:51.854441 [debug] [Thread-7 (]: Databricks adapter: Connection(session-id=01f1c681-f688-1f3c-94fa-2705c1cdda77) - Created
+[0m22:14:52.926807 [debug] [Thread-7 (]: SQL status: OK in 1.960 seconds
+[0m22:14:52.928824 [debug] [Thread-7 (]: Databricks adapter: Cursor(session-id=01f1c681-f688-1f3c-94fa-2705c1cdda77, command-id=01f1c681-f6ac-10f4-915d-0e643d6999e3) - Closing
+[0m22:14:52.928824 [debug] [Thread-7 (]: On test.dbt_finance.source_unique_silver_transactions_txn_id.78d2023c8e: Close
+[0m22:14:52.928824 [debug] [Thread-7 (]: Databricks adapter: Connection(session-id=01f1c681-f688-1f3c-94fa-2705c1cdda77) - Closing
+[0m22:14:53.160618 [warn ] [Thread-7 (]: 9 of 20 WARN 15000 source_unique_silver_transactions_txn_id .................... [[33mWARN 15000[0m in 2.24s]
+[0m22:14:53.160618 [debug] [Thread-7 (]: Finished running node test.dbt_finance.source_unique_silver_transactions_txn_id.78d2023c8e
+[0m22:14:53.160618 [debug] [Thread-5 (]: Began running node model.dbt_finance.branch_performance
+[0m22:14:53.160618 [debug] [Thread-6 (]: Began running node model.dbt_finance.customer_360
+[0m22:14:53.160618 [debug] [Thread-7 (]: Began running node model.dbt_finance.daily_bank_kpi
+[0m22:14:53.160618 [info ] [Thread-5 (]: 10 of 20 START sql table model gold_dbt.branch_performance ..................... [RUN]
+[0m22:14:53.160618 [info ] [Thread-6 (]: 11 of 20 START sql table model gold_dbt.customer_360 ........................... [RUN]
+[0m22:14:53.160618 [debug] [Thread-5 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.dbt_finance.branch_performance) - Creating connection
+[0m22:14:53.160618 [info ] [Thread-7 (]: 12 of 20 START sql table model gold_dbt.daily_bank_kpi ......................... [RUN]
+[0m22:14:53.160618 [debug] [Thread-6 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.dbt_finance.customer_360) - Creating connection
+[0m22:14:53.176982 [debug] [Thread-5 (]: Acquiring new databricks connection 'model.dbt_finance.branch_performance'
+[0m22:14:53.176982 [debug] [Thread-7 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.dbt_finance.daily_bank_kpi) - Creating connection
+[0m22:14:53.178522 [debug] [Thread-6 (]: Acquiring new databricks connection 'model.dbt_finance.customer_360'
+[0m22:14:53.179343 [debug] [Thread-5 (]: Began compiling node model.dbt_finance.branch_performance
+[0m22:14:53.179696 [debug] [Thread-7 (]: Acquiring new databricks connection 'model.dbt_finance.daily_bank_kpi'
+[0m22:14:53.180328 [debug] [Thread-6 (]: Began compiling node model.dbt_finance.customer_360
+[0m22:14:53.184523 [debug] [Thread-5 (]: Writing injected SQL for node "model.dbt_finance.branch_performance"
+[0m22:14:53.184523 [debug] [Thread-7 (]: Began compiling node model.dbt_finance.daily_bank_kpi
+[0m22:14:53.190781 [debug] [Thread-6 (]: Writing injected SQL for node "model.dbt_finance.customer_360"
+[0m22:14:53.190781 [debug] [Thread-7 (]: Writing injected SQL for node "model.dbt_finance.daily_bank_kpi"
+[0m22:14:53.190781 [debug] [Thread-5 (]: Began executing node model.dbt_finance.branch_performance
+[0m22:14:53.190781 [debug] [Thread-5 (]: MATERIALIZING TABLE
+[0m22:14:53.200241 [debug] [Thread-5 (]: Using databricks connection "model.dbt_finance.branch_performance"
+[0m22:14:53.203595 [debug] [Thread-5 (]: On model.dbt_finance.branch_performance: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "77d5e10f-41fe-429b-bc18-da874b67d4c4", "node_id": "model.dbt_finance.branch_performance"} */
+SELECT
+    table_catalog,
+    table_schema,
+    table_name,
+    filter_name,
+    target_columns
+  FROM `banking`.`information_schema`.`row_filters`
+  WHERE table_catalog = 'banking'
+    AND table_schema = 'gold_dbt'
+    AND table_name = 'branch_performance'
+[0m22:14:53.203595 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m22:14:53.203595 [debug] [Thread-7 (]: Began executing node model.dbt_finance.daily_bank_kpi
+[0m22:14:53.208832 [debug] [Thread-7 (]: MATERIALIZING TABLE
+[0m22:14:53.217281 [debug] [Thread-6 (]: Began executing node model.dbt_finance.customer_360
+[0m22:14:53.215768 [debug] [Thread-7 (]: Using databricks connection "model.dbt_finance.daily_bank_kpi"
+[0m22:14:53.221332 [debug] [Thread-6 (]: MATERIALIZING TABLE
+[0m22:14:53.222588 [debug] [Thread-7 (]: On model.dbt_finance.daily_bank_kpi: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "77d5e10f-41fe-429b-bc18-da874b67d4c4", "node_id": "model.dbt_finance.daily_bank_kpi"} */
+SELECT
+    table_catalog,
+    table_schema,
+    table_name,
+    filter_name,
+    target_columns
+  FROM `banking`.`information_schema`.`row_filters`
+  WHERE table_catalog = 'banking'
+    AND table_schema = 'gold_dbt'
+    AND table_name = 'daily_bank_kpi'
+[0m22:14:53.229796 [debug] [Thread-6 (]: Using databricks connection "model.dbt_finance.customer_360"
+[0m22:14:53.229796 [debug] [Thread-7 (]: Opening a new connection, currently in state init
+[0m22:14:53.233775 [debug] [Thread-6 (]: On model.dbt_finance.customer_360: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "77d5e10f-41fe-429b-bc18-da874b67d4c4", "node_id": "model.dbt_finance.customer_360"} */
+SELECT
+    table_catalog,
+    table_schema,
+    table_name,
+    filter_name,
+    target_columns
+  FROM `banking`.`information_schema`.`row_filters`
+  WHERE table_catalog = 'banking'
+    AND table_schema = 'gold_dbt'
+    AND table_name = 'customer_360'
+[0m22:14:53.237273 [debug] [Thread-6 (]: Opening a new connection, currently in state init
+[0m22:14:53.837629 [debug] [Thread-4 (]: SQL status: OK in 15.050 seconds
+[0m22:14:53.837629 [debug] [Thread-4 (]: Databricks adapter: Cursor(session-id=01f1c681-ee37-149d-b9da-749ed37d8e45, command-id=01f1c681-eee1-1368-919c-3b340ed9e995) - Closing
+[0m22:14:54.106505 [debug] [Thread-7 (]: Databricks adapter: Connection(session-id=01f1c681-f7e1-1130-aecf-6f487001091d) - Created
+[0m22:14:54.123133 [debug] [Thread-4 (]: Applying tags to relation None
+[0m22:14:54.138758 [debug] [Thread-5 (]: Databricks adapter: Connection(session-id=01f1c681-f7e5-1cb8-8df2-d65514a18fb9) - Created
+[0m22:14:54.138758 [debug] [Thread-6 (]: Databricks adapter: Connection(session-id=01f1c681-f7e4-1d65-90ce-1c59287b1a74) - Created
+[0m22:14:54.156628 [debug] [Thread-4 (]: On model.dbt_finance.risk_customer_summary: Close
+[0m22:14:54.156628 [debug] [Thread-4 (]: Databricks adapter: Connection(session-id=01f1c681-ee37-149d-b9da-749ed37d8e45) - Closing
+[0m22:14:54.389984 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '77d5e10f-41fe-429b-bc18-da874b67d4c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026D86D5F410>]}
+[0m22:14:54.393240 [info ] [Thread-4 (]: 1 of 20 OK created sql table model gold_dbt.risk_customer_summary .............. [[32mOK[0m in 17.64s]
+[0m22:14:54.393240 [debug] [Thread-4 (]: Finished running node model.dbt_finance.risk_customer_summary
+[0m22:14:54.393240 [debug] [Thread-4 (]: Began running node model.dbt_finance.transaction_channel_summary
+[0m22:14:54.393240 [info ] [Thread-4 (]: 13 of 20 START sql table model gold_dbt.transaction_channel_summary ............ [RUN]
+[0m22:14:54.400230 [debug] [Thread-4 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.dbt_finance.transaction_channel_summary) - Creating connection
+[0m22:14:54.403677 [debug] [Thread-4 (]: Acquiring new databricks connection 'model.dbt_finance.transaction_channel_summary'
+[0m22:14:54.403677 [debug] [Thread-4 (]: Began compiling node model.dbt_finance.transaction_channel_summary
+[0m22:14:54.412599 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_finance.transaction_channel_summary"
+[0m22:14:54.414634 [debug] [Thread-4 (]: Began executing node model.dbt_finance.transaction_channel_summary
+[0m22:14:54.419578 [debug] [Thread-4 (]: MATERIALIZING TABLE
+[0m22:14:54.424460 [debug] [Thread-4 (]: Using databricks connection "model.dbt_finance.transaction_channel_summary"
+[0m22:14:54.424460 [debug] [Thread-4 (]: On model.dbt_finance.transaction_channel_summary: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "77d5e10f-41fe-429b-bc18-da874b67d4c4", "node_id": "model.dbt_finance.transaction_channel_summary"} */
+SELECT
+    table_catalog,
+    table_schema,
+    table_name,
+    filter_name,
+    target_columns
+  FROM `banking`.`information_schema`.`row_filters`
+  WHERE table_catalog = 'banking'
+    AND table_schema = 'gold_dbt'
+    AND table_name = 'transaction_channel_summary'
+[0m22:14:54.424460 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m22:14:54.701629 [debug] [Thread-7 (]: SQL status: OK in 1.470 seconds
+[0m22:14:54.733507 [debug] [Thread-6 (]: SQL status: OK in 1.500 seconds
+[0m22:14:54.733507 [debug] [Thread-7 (]: Databricks adapter: Cursor(session-id=01f1c681-f7e1-1130-aecf-6f487001091d, command-id=01f1c681-f803-101f-9d9c-77d637e253b7) - Closing
+[0m22:14:54.733507 [debug] [Thread-7 (]: Writing runtime sql for node "model.dbt_finance.daily_bank_kpi"
+[0m22:14:54.733507 [debug] [Thread-6 (]: Databricks adapter: Cursor(session-id=01f1c681-f7e4-1d65-90ce-1c59287b1a74, command-id=01f1c681-f80a-1bea-a902-a3b81385d169) - Closing
+[0m22:14:54.733507 [debug] [Thread-6 (]: Writing runtime sql for node "model.dbt_finance.customer_360"
+[0m22:14:54.733507 [debug] [Thread-7 (]: Using databricks connection "model.dbt_finance.daily_bank_kpi"
+[0m22:14:54.733507 [debug] [Thread-7 (]: On model.dbt_finance.daily_bank_kpi: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "77d5e10f-41fe-429b-bc18-da874b67d4c4", "node_id": "model.dbt_finance.daily_bank_kpi"} */
+
+  
+    
+        create or replace table `banking`.`gold_dbt`.`daily_bank_kpi`
+      
+      
+    using delta
+  
+      
+      
+      
+      
+      
+      
+      
+      
+      as
+      WITH txn_daily AS (
+    SELECT
+        DATE(txn_timestamp) AS txn_date,
+        COUNT(txn_id) AS total_transactions,
+        SUM(amount) AS total_transaction_amount
+    FROM `banking`.`silver`.`transactions`
+    GROUP BY DATE(txn_timestamp)
+),
+
+customer_metrics AS (
+    SELECT COUNT(DISTINCT customer_id) AS total_customers
+    FROM `banking`.`silver`.`customers`
+),
+
+account_metrics AS (
+    SELECT
+        COUNT(account_id) AS total_accounts,
+        SUM(balance) AS total_balance
+    FROM `banking`.`silver`.`accounts`
+),
+
+credit_metrics AS (
+    SELECT
+        AVG(TRY_CAST(credit_score AS DOUBLE)) AS avg_credit_score,
+        SUM(CASE WHEN risk_grade = 'HIGH' THEN 1 ELSE 0 END) AS high_risk_customers
+    FROM `banking`.`silver`.`credit_bureau_reports`
+)
+
+SELECT
+    t.txn_date,
+    cm.total_customers,
+    am.total_accounts,
+    am.total_balance,
+    t.total_transactions,
+    t.total_transaction_amount,
+    cr.avg_credit_score,
+    cr.high_risk_customers
+FROM txn_daily t
+CROSS JOIN customer_metrics cm
+CROSS JOIN account_metrics am
+CROSS JOIN credit_metrics cr
+  
+[0m22:14:54.733507 [debug] [Thread-6 (]: Using databricks connection "model.dbt_finance.customer_360"
+[0m22:14:54.749412 [debug] [Thread-6 (]: On model.dbt_finance.customer_360: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "77d5e10f-41fe-429b-bc18-da874b67d4c4", "node_id": "model.dbt_finance.customer_360"} */
+
+  
+    
+        create or replace table `banking`.`gold_dbt`.`customer_360`
+      
+      
+    using delta
+  
+      
+      
+      
+      
+      
+      
+      
+      
+      as
+      WITH account_agg AS (
+    SELECT
+        customer_id,
+        COUNT(account_id) AS total_accounts,
+        SUM(balance) AS total_balance
+    FROM `banking`.`silver`.`accounts`
+    GROUP BY customer_id
+),
+
+txn_agg AS (
+    SELECT
+        a.customer_id,
+        COUNT(t.txn_id) AS total_transactions,
+        SUM(t.amount) AS total_transaction_amount
+    FROM `banking`.`silver`.`transactions` t
+    JOIN `banking`.`silver`.`accounts` a
+        ON t.account_id = a.account_id
+    GROUP BY a.customer_id
+),
+
+credit_latest AS (
+    SELECT *
+    FROM (
+        SELECT
+            *,
+            ROW_NUMBER() OVER (
+                PARTITION BY customer_id
+                ORDER BY bureau_pull_date DESC
+            ) AS rn
+        FROM `banking`.`silver`.`credit_bureau_reports`
+    )
+    WHERE rn = 1
+)
+
+SELECT
+    c.customer_id,
+    CONCAT(c.first_name, ' ', c.last_name) AS customer_name,
+    b.branch_name,
+    COALESCE(a.total_accounts, 0) AS total_accounts,
+    COALESCE(a.total_balance, 0) AS total_balance,
+    COALESCE(t.total_transactions, 0) AS total_transactions,
+    COALESCE(t.total_transaction_amount, 0) AS total_transaction_amount,
+    TRY_CAST(cr.credit_score AS DOUBLE) AS credit_score,
+    cr.risk_grade,
+    TRY_CAST(cr.external_active_loans AS INT) AS external_active_loans,
+    TRY_CAST(cr.external_overdue_amount AS DECIMAL(18, 2)) AS external_overdue_amount,
+    CASE
+        WHEN a.total_balance >= 500000 THEN 'HIGH_VALUE'
+        WHEN a.total_balance >= 100000 THEN 'MEDIUM_VALUE'
+        ELSE 'LOW_VALUE'
+    END AS customer_segment
+FROM `banking`.`silver`.`customers` c
+LEFT JOIN account_agg a
+    ON c.customer_id = a.customer_id
+LEFT JOIN txn_agg t
+    ON c.customer_id = t.customer_id
+LEFT JOIN `banking`.`silver`.`branches` b
+    ON c.branch_code = b.branch_code
+LEFT JOIN credit_latest cr
+    ON c.customer_id = cr.customer_id
+  
+[0m22:14:54.749412 [debug] [Thread-5 (]: SQL status: OK in 1.550 seconds
+[0m22:14:54.749412 [debug] [Thread-5 (]: Databricks adapter: Cursor(session-id=01f1c681-f7e5-1cb8-8df2-d65514a18fb9, command-id=01f1c681-f80a-1454-b70b-89a5024d0003) - Closing
+[0m22:14:54.749412 [debug] [Thread-5 (]: Writing runtime sql for node "model.dbt_finance.branch_performance"
+[0m22:14:54.749412 [debug] [Thread-5 (]: Using databricks connection "model.dbt_finance.branch_performance"
+[0m22:14:54.749412 [debug] [Thread-5 (]: On model.dbt_finance.branch_performance: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "77d5e10f-41fe-429b-bc18-da874b67d4c4", "node_id": "model.dbt_finance.branch_performance"} */
+
+  
+    
+        create or replace table `banking`.`gold_dbt`.`branch_performance`
+      
+      
+    using delta
+  
+      
+      
+      
+      
+      
+      
+      
+      
+      as
+      WITH customer_branch AS (
+    SELECT
+        customer_id,
+        branch_code
+    FROM `banking`.`silver`.`customers`
+),
+
+account_agg AS (
+    SELECT
+        customer_id,
+        COUNT(account_id) AS total_accounts,
+        SUM(balance) AS total_balance
+    FROM `banking`.`silver`.`accounts`
+    GROUP BY customer_id
+),
+
+txn_agg AS (
+    SELECT
+        a.customer_id,
+        COUNT(t.txn_id) AS total_transactions,
+        SUM(t.amount) AS total_transaction_amount
+    FROM `banking`.`silver`.`transactions` t
+    JOIN `banking`.`silver`.`accounts` a
+        ON t.account_id = a.account_id
+    GROUP BY a.customer_id
+)
+
+SELECT
+    b.branch_code,
+    b.branch_name,
+    COUNT(DISTINCT cb.customer_id) AS total_customers,
+    SUM(a.total_accounts) AS total_accounts,
+    SUM(a.total_balance) AS total_deposits,
+    SUM(t.total_transactions) AS total_transactions,
+    SUM(t.total_transaction_amount) AS total_transaction_amount
+FROM `banking`.`silver`.`branches` b
+LEFT JOIN customer_branch cb
+    ON b.branch_code = cb.branch_code
+LEFT JOIN account_agg a
+    ON cb.customer_id = a.customer_id
+LEFT JOIN txn_agg t
+    ON cb.customer_id = t.customer_id
+GROUP BY
+    b.branch_code,
+    b.branch_name
+  
+[0m22:14:55.381958 [debug] [Thread-4 (]: Databricks adapter: Connection(session-id=01f1c681-f8a6-1502-a831-b459ca61c2e0) - Created
+[0m22:14:56.020443 [debug] [Thread-4 (]: SQL status: OK in 1.600 seconds
+[0m22:14:56.039034 [debug] [Thread-4 (]: Databricks adapter: Cursor(session-id=01f1c681-f8a6-1502-a831-b459ca61c2e0, command-id=01f1c681-f8c6-1caf-b254-3be4a2730c3f) - Closing
+[0m22:14:56.041046 [debug] [Thread-4 (]: Writing runtime sql for node "model.dbt_finance.transaction_channel_summary"
+[0m22:14:56.043056 [debug] [Thread-4 (]: Using databricks connection "model.dbt_finance.transaction_channel_summary"
+[0m22:14:56.043056 [debug] [Thread-4 (]: On model.dbt_finance.transaction_channel_summary: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "77d5e10f-41fe-429b-bc18-da874b67d4c4", "node_id": "model.dbt_finance.transaction_channel_summary"} */
+
+  
+    
+        create or replace table `banking`.`gold_dbt`.`transaction_channel_summary`
+      
+      
+    using delta
+  
+      
+      
+      
+      
+      
+      
+      
+      
+      as
+      SELECT
+    DATE(t.txn_timestamp) AS txn_date,
+    pg.gateway_name,
+    pg.device_type,
+    COUNT(*) AS total_transactions,
+    SUM(CASE WHEN pg.gateway_status = 'SUCCESS' THEN 1 ELSE 0 END) AS successful_transactions,
+    SUM(CASE WHEN pg.gateway_status = 'FAILED' THEN 1 ELSE 0 END) AS failed_transactions,
+    AVG(TRY_CAST(pg.processing_time_ms AS DOUBLE)) AS avg_processing_time_ms
+FROM `banking`.`silver`.`transactions` t
+JOIN `banking`.`silver`.`payment_gateway_logs` pg
+    ON CAST(t.txn_id AS STRING) = CAST(pg.txn_id AS STRING)
+GROUP BY
+    DATE(t.txn_timestamp),
+    pg.gateway_name,
+    pg.device_type
+  
+[0m22:14:59.410920 [debug] [Thread-7 (]: SQL status: OK in 4.680 seconds
+[0m22:14:59.410920 [debug] [Thread-7 (]: Databricks adapter: Cursor(session-id=01f1c681-f7e1-1130-aecf-6f487001091d, command-id=01f1c681-f864-1ca6-8e3f-f0aea99d9afe) - Closing
+[0m22:14:59.414562 [debug] [Thread-7 (]: Applying tags to relation None
+[0m22:14:59.414562 [debug] [Thread-7 (]: On model.dbt_finance.daily_bank_kpi: Close
+[0m22:14:59.414562 [debug] [Thread-7 (]: Databricks adapter: Connection(session-id=01f1c681-f7e1-1130-aecf-6f487001091d) - Closing
+[0m22:14:59.645038 [debug] [Thread-7 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '77d5e10f-41fe-429b-bc18-da874b67d4c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026D872E78C0>]}
+[0m22:14:59.645038 [info ] [Thread-7 (]: 12 of 20 OK created sql table model gold_dbt.daily_bank_kpi .................... [[32mOK[0m in 6.47s]
+[0m22:14:59.645038 [debug] [Thread-7 (]: Finished running node model.dbt_finance.daily_bank_kpi
+[0m22:14:59.660852 [debug] [Thread-7 (]: Began running node test.dbt_finance.unique_risk_customer_summary_risk_grade.7d9f51b341
+[0m22:14:59.660852 [info ] [Thread-7 (]: 14 of 20 START test unique_risk_customer_summary_risk_grade .................... [RUN]
+[0m22:14:59.664618 [debug] [Thread-7 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.unique_risk_customer_summary_risk_grade.7d9f51b341) - Creating connection
+[0m22:14:59.664618 [debug] [Thread-7 (]: Acquiring new databricks connection 'test.dbt_finance.unique_risk_customer_summary_risk_grade.7d9f51b341'
+[0m22:14:59.666614 [debug] [Thread-7 (]: Began compiling node test.dbt_finance.unique_risk_customer_summary_risk_grade.7d9f51b341
+[0m22:14:59.684891 [debug] [Thread-7 (]: Writing injected SQL for node "test.dbt_finance.unique_risk_customer_summary_risk_grade.7d9f51b341"
+[0m22:14:59.684891 [debug] [Thread-7 (]: Began executing node test.dbt_finance.unique_risk_customer_summary_risk_grade.7d9f51b341
+[0m22:14:59.694573 [debug] [Thread-7 (]: Writing runtime sql for node "test.dbt_finance.unique_risk_customer_summary_risk_grade.7d9f51b341"
+[0m22:14:59.696613 [debug] [Thread-7 (]: Using databricks connection "test.dbt_finance.unique_risk_customer_summary_risk_grade.7d9f51b341"
+[0m22:14:59.696613 [debug] [Thread-7 (]: On test.dbt_finance.unique_risk_customer_summary_risk_grade.7d9f51b341: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "77d5e10f-41fe-429b-bc18-da874b67d4c4", "node_id": "test.dbt_finance.unique_risk_customer_summary_risk_grade.7d9f51b341"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    risk_grade as unique_field,
+    count(*) as n_records
+
+from `banking`.`gold_dbt`.`risk_customer_summary`
+where risk_grade is not null
+group by risk_grade
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:14:59.696613 [debug] [Thread-7 (]: Opening a new connection, currently in state init
+[0m22:15:00.529874 [debug] [Thread-7 (]: Databricks adapter: Connection(session-id=01f1c681-fbb6-187e-8354-2d15c089b227) - Created
+[0m22:15:00.552101 [debug] [Thread-4 (]: SQL status: OK in 4.510 seconds
+[0m22:15:00.552101 [debug] [Thread-4 (]: Databricks adapter: Cursor(session-id=01f1c681-f8a6-1502-a831-b459ca61c2e0, command-id=01f1c681-f929-1ac2-a6c4-62bddb0297c0) - Closing
+[0m22:15:00.552101 [debug] [Thread-4 (]: Applying tags to relation None
+[0m22:15:00.568178 [debug] [Thread-4 (]: On model.dbt_finance.transaction_channel_summary: Close
+[0m22:15:00.568178 [debug] [Thread-4 (]: Databricks adapter: Connection(session-id=01f1c681-f8a6-1502-a831-b459ca61c2e0) - Closing
+[0m22:15:00.742373 [debug] [Thread-5 (]: SQL status: OK in 5.990 seconds
+[0m22:15:00.742373 [debug] [Thread-5 (]: Databricks adapter: Cursor(session-id=01f1c681-f7e5-1cb8-8df2-d65514a18fb9, command-id=01f1c681-f866-1d23-8ffa-6b1afeac5c2e) - Closing
+[0m22:15:00.813586 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '77d5e10f-41fe-429b-bc18-da874b67d4c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026DC7776660>]}
+[0m22:15:00.819094 [debug] [Thread-6 (]: SQL status: OK in 6.070 seconds
+[0m22:15:00.821109 [debug] [Thread-6 (]: Databricks adapter: Cursor(session-id=01f1c681-f7e4-1d65-90ce-1c59287b1a74, command-id=01f1c681-f865-1023-9ee8-c6c3b4b632bf) - Closing
+[0m22:15:00.813586 [info ] [Thread-4 (]: 13 of 20 OK created sql table model gold_dbt.transaction_channel_summary ....... [[32mOK[0m in 6.41s]
+[0m22:15:00.821109 [debug] [Thread-4 (]: Finished running node model.dbt_finance.transaction_channel_summary
+[0m22:15:00.821109 [debug] [Thread-4 (]: Began running node test.dbt_finance.unique_daily_bank_kpi_txn_date.db20d9585a
+[0m22:15:00.821109 [info ] [Thread-4 (]: 15 of 20 START test unique_daily_bank_kpi_txn_date ............................. [RUN]
+[0m22:15:00.821109 [debug] [Thread-4 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.unique_daily_bank_kpi_txn_date.db20d9585a) - Creating connection
+[0m22:15:00.821109 [debug] [Thread-4 (]: Acquiring new databricks connection 'test.dbt_finance.unique_daily_bank_kpi_txn_date.db20d9585a'
+[0m22:15:00.827362 [debug] [Thread-4 (]: Began compiling node test.dbt_finance.unique_daily_bank_kpi_txn_date.db20d9585a
+[0m22:15:00.836768 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_finance.unique_daily_bank_kpi_txn_date.db20d9585a"
+[0m22:15:00.836768 [debug] [Thread-4 (]: Began executing node test.dbt_finance.unique_daily_bank_kpi_txn_date.db20d9585a
+[0m22:15:00.836768 [debug] [Thread-4 (]: Writing runtime sql for node "test.dbt_finance.unique_daily_bank_kpi_txn_date.db20d9585a"
+[0m22:15:00.836768 [debug] [Thread-4 (]: Using databricks connection "test.dbt_finance.unique_daily_bank_kpi_txn_date.db20d9585a"
+[0m22:15:00.845746 [debug] [Thread-4 (]: On test.dbt_finance.unique_daily_bank_kpi_txn_date.db20d9585a: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "77d5e10f-41fe-429b-bc18-da874b67d4c4", "node_id": "test.dbt_finance.unique_daily_bank_kpi_txn_date.db20d9585a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    txn_date as unique_field,
+    count(*) as n_records
+
+from `banking`.`gold_dbt`.`daily_bank_kpi`
+where txn_date is not null
+group by txn_date
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:15:00.845746 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m22:15:01.012220 [debug] [Thread-5 (]: Applying tags to relation None
+[0m22:15:01.012220 [debug] [Thread-5 (]: On model.dbt_finance.branch_performance: Close
+[0m22:15:01.012220 [debug] [Thread-5 (]: Databricks adapter: Connection(session-id=01f1c681-f7e5-1cb8-8df2-d65514a18fb9) - Closing
+[0m22:15:01.088955 [debug] [Thread-6 (]: Applying tags to relation None
+[0m22:15:01.095031 [debug] [Thread-6 (]: On model.dbt_finance.customer_360: Close
+[0m22:15:01.097069 [debug] [Thread-6 (]: Databricks adapter: Connection(session-id=01f1c681-f7e4-1d65-90ce-1c59287b1a74) - Closing
+[0m22:15:01.242611 [debug] [Thread-7 (]: SQL status: OK in 1.550 seconds
+[0m22:15:01.242611 [debug] [Thread-7 (]: Databricks adapter: Cursor(session-id=01f1c681-fbb6-187e-8354-2d15c089b227, command-id=01f1c681-fbd7-1c72-85bd-28e24e97606b) - Closing
+[0m22:15:01.242611 [debug] [Thread-7 (]: On test.dbt_finance.unique_risk_customer_summary_risk_grade.7d9f51b341: Close
+[0m22:15:01.242611 [debug] [Thread-7 (]: Databricks adapter: Connection(session-id=01f1c681-fbb6-187e-8354-2d15c089b227) - Closing
+[0m22:15:01.242611 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '77d5e10f-41fe-429b-bc18-da874b67d4c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026D872A3590>]}
+[0m22:15:01.242611 [info ] [Thread-5 (]: 10 of 20 OK created sql table model gold_dbt.branch_performance ................ [[32mOK[0m in 8.08s]
+[0m22:15:01.242611 [debug] [Thread-5 (]: Finished running node model.dbt_finance.branch_performance
+[0m22:15:01.242611 [debug] [Thread-5 (]: Began running node test.dbt_finance.not_null_transaction_channel_summary_total_transactions.068fd3983d
+[0m22:15:01.242611 [info ] [Thread-5 (]: 16 of 20 START test not_null_transaction_channel_summary_total_transactions .... [RUN]
+[0m22:15:01.258475 [debug] [Thread-5 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.not_null_transaction_channel_summary_total_transactions.068fd3983d) - Creating connection
+[0m22:15:01.258475 [debug] [Thread-5 (]: Acquiring new databricks connection 'test.dbt_finance.not_null_transaction_channel_summary_total_transactions.068fd3983d'
+[0m22:15:01.258475 [debug] [Thread-5 (]: Began compiling node test.dbt_finance.not_null_transaction_channel_summary_total_transactions.068fd3983d
+[0m22:15:01.258475 [debug] [Thread-5 (]: Writing injected SQL for node "test.dbt_finance.not_null_transaction_channel_summary_total_transactions.068fd3983d"
+[0m22:15:01.282597 [debug] [Thread-5 (]: Began executing node test.dbt_finance.not_null_transaction_channel_summary_total_transactions.068fd3983d
+[0m22:15:01.282597 [debug] [Thread-5 (]: Writing runtime sql for node "test.dbt_finance.not_null_transaction_channel_summary_total_transactions.068fd3983d"
+[0m22:15:01.282597 [debug] [Thread-5 (]: Using databricks connection "test.dbt_finance.not_null_transaction_channel_summary_total_transactions.068fd3983d"
+[0m22:15:01.282597 [debug] [Thread-5 (]: On test.dbt_finance.not_null_transaction_channel_summary_total_transactions.068fd3983d: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "77d5e10f-41fe-429b-bc18-da874b67d4c4", "node_id": "test.dbt_finance.not_null_transaction_channel_summary_total_transactions.068fd3983d"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select total_transactions
+from `banking`.`gold_dbt`.`transaction_channel_summary`
+where total_transactions is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:15:01.282597 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m22:15:01.336941 [debug] [Thread-6 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '77d5e10f-41fe-429b-bc18-da874b67d4c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026D872E7EC0>]}
+[0m22:15:01.336941 [info ] [Thread-6 (]: 11 of 20 OK created sql table model gold_dbt.customer_360 ...................... [[32mOK[0m in 8.18s]
+[0m22:15:01.336941 [debug] [Thread-6 (]: Finished running node model.dbt_finance.customer_360
+[0m22:15:01.336941 [debug] [Thread-6 (]: Began running node test.dbt_finance.not_null_branch_performance_branch_code.d3f278beb5
+[0m22:15:01.336941 [info ] [Thread-6 (]: 17 of 20 START test not_null_branch_performance_branch_code .................... [RUN]
+[0m22:15:01.345016 [debug] [Thread-6 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.not_null_branch_performance_branch_code.d3f278beb5) - Creating connection
+[0m22:15:01.345016 [debug] [Thread-6 (]: Acquiring new databricks connection 'test.dbt_finance.not_null_branch_performance_branch_code.d3f278beb5'
+[0m22:15:01.347310 [debug] [Thread-6 (]: Began compiling node test.dbt_finance.not_null_branch_performance_branch_code.d3f278beb5
+[0m22:15:01.353626 [debug] [Thread-6 (]: Writing injected SQL for node "test.dbt_finance.not_null_branch_performance_branch_code.d3f278beb5"
+[0m22:15:01.353626 [debug] [Thread-6 (]: Began executing node test.dbt_finance.not_null_branch_performance_branch_code.d3f278beb5
+[0m22:15:01.353626 [debug] [Thread-6 (]: Writing runtime sql for node "test.dbt_finance.not_null_branch_performance_branch_code.d3f278beb5"
+[0m22:15:01.353626 [debug] [Thread-6 (]: Using databricks connection "test.dbt_finance.not_null_branch_performance_branch_code.d3f278beb5"
+[0m22:15:01.353626 [debug] [Thread-6 (]: On test.dbt_finance.not_null_branch_performance_branch_code.d3f278beb5: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "77d5e10f-41fe-429b-bc18-da874b67d4c4", "node_id": "test.dbt_finance.not_null_branch_performance_branch_code.d3f278beb5"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select branch_code
+from `banking`.`gold_dbt`.`branch_performance`
+where branch_code is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:15:01.353626 [debug] [Thread-6 (]: Opening a new connection, currently in state init
+[0m22:15:01.491047 [info ] [Thread-7 (]: 14 of 20 PASS unique_risk_customer_summary_risk_grade .......................... [[32mPASS[0m in 1.83s]
+[0m22:15:01.491047 [debug] [Thread-7 (]: Finished running node test.dbt_finance.unique_risk_customer_summary_risk_grade.7d9f51b341
+[0m22:15:01.491047 [debug] [Thread-7 (]: Began running node test.dbt_finance.unique_branch_performance_branch_code.67b7721c2d
+[0m22:15:01.491047 [info ] [Thread-7 (]: 18 of 20 START test unique_branch_performance_branch_code ...................... [RUN]
+[0m22:15:01.491047 [debug] [Thread-7 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.unique_branch_performance_branch_code.67b7721c2d) - Creating connection
+[0m22:15:01.491047 [debug] [Thread-7 (]: Acquiring new databricks connection 'test.dbt_finance.unique_branch_performance_branch_code.67b7721c2d'
+[0m22:15:01.491047 [debug] [Thread-7 (]: Began compiling node test.dbt_finance.unique_branch_performance_branch_code.67b7721c2d
+[0m22:15:01.514288 [debug] [Thread-7 (]: Writing injected SQL for node "test.dbt_finance.unique_branch_performance_branch_code.67b7721c2d"
+[0m22:15:01.517413 [debug] [Thread-7 (]: Began executing node test.dbt_finance.unique_branch_performance_branch_code.67b7721c2d
+[0m22:15:01.517413 [debug] [Thread-7 (]: Writing runtime sql for node "test.dbt_finance.unique_branch_performance_branch_code.67b7721c2d"
+[0m22:15:01.517413 [debug] [Thread-7 (]: Using databricks connection "test.dbt_finance.unique_branch_performance_branch_code.67b7721c2d"
+[0m22:15:01.517413 [debug] [Thread-7 (]: On test.dbt_finance.unique_branch_performance_branch_code.67b7721c2d: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "77d5e10f-41fe-429b-bc18-da874b67d4c4", "node_id": "test.dbt_finance.unique_branch_performance_branch_code.67b7721c2d"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    branch_code as unique_field,
+    count(*) as n_records
+
+from `banking`.`gold_dbt`.`branch_performance`
+where branch_code is not null
+group by branch_code
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:15:01.517413 [debug] [Thread-7 (]: Opening a new connection, currently in state init
+[0m22:15:01.658672 [debug] [Thread-4 (]: Databricks adapter: Connection(session-id=01f1c681-fc5f-1ffd-9a6b-f1413e3d629d) - Created
+[0m22:15:02.166654 [debug] [Thread-5 (]: Databricks adapter: Connection(session-id=01f1c681-fcae-1f3b-b73a-67559848d903) - Created
+[0m22:15:02.204761 [debug] [Thread-6 (]: Databricks adapter: Connection(session-id=01f1c681-fcb4-1b68-af8e-f5715e878188) - Created
+[0m22:15:02.376559 [debug] [Thread-4 (]: SQL status: OK in 1.530 seconds
+[0m22:15:02.376559 [debug] [Thread-4 (]: Databricks adapter: Cursor(session-id=01f1c681-fc5f-1ffd-9a6b-f1413e3d629d, command-id=01f1c681-fc85-1f8f-970b-cd8027d9a20a) - Closing
+[0m22:15:02.376559 [debug] [Thread-4 (]: On test.dbt_finance.unique_daily_bank_kpi_txn_date.db20d9585a: Close
+[0m22:15:02.376559 [debug] [Thread-4 (]: Databricks adapter: Connection(session-id=01f1c681-fc5f-1ffd-9a6b-f1413e3d629d) - Closing
+[0m22:15:02.424018 [debug] [Thread-7 (]: Databricks adapter: Connection(session-id=01f1c681-fcd2-1f6d-8170-4cb57e3ed4db) - Created
+[0m22:15:02.629580 [info ] [Thread-4 (]: 15 of 20 PASS unique_daily_bank_kpi_txn_date ................................... [[32mPASS[0m in 1.81s]
+[0m22:15:02.629580 [debug] [Thread-4 (]: Finished running node test.dbt_finance.unique_daily_bank_kpi_txn_date.db20d9585a
+[0m22:15:02.629580 [debug] [Thread-4 (]: Began running node test.dbt_finance.not_null_customer_360_customer_id.b69699741f
+[0m22:15:02.629580 [info ] [Thread-4 (]: 19 of 20 START test not_null_customer_360_customer_id .......................... [RUN]
+[0m22:15:02.629580 [debug] [Thread-4 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.not_null_customer_360_customer_id.b69699741f) - Creating connection
+[0m22:15:02.629580 [debug] [Thread-4 (]: Acquiring new databricks connection 'test.dbt_finance.not_null_customer_360_customer_id.b69699741f'
+[0m22:15:02.629580 [debug] [Thread-4 (]: Began compiling node test.dbt_finance.not_null_customer_360_customer_id.b69699741f
+[0m22:15:02.653126 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_finance.not_null_customer_360_customer_id.b69699741f"
+[0m22:15:02.653126 [debug] [Thread-4 (]: Began executing node test.dbt_finance.not_null_customer_360_customer_id.b69699741f
+[0m22:15:02.661553 [debug] [Thread-4 (]: Writing runtime sql for node "test.dbt_finance.not_null_customer_360_customer_id.b69699741f"
+[0m22:15:02.665213 [debug] [Thread-4 (]: Using databricks connection "test.dbt_finance.not_null_customer_360_customer_id.b69699741f"
+[0m22:15:02.665213 [debug] [Thread-4 (]: On test.dbt_finance.not_null_customer_360_customer_id.b69699741f: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "77d5e10f-41fe-429b-bc18-da874b67d4c4", "node_id": "test.dbt_finance.not_null_customer_360_customer_id.b69699741f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from `banking`.`gold_dbt`.`customer_360`
+where customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:15:02.667231 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m22:15:02.878876 [debug] [Thread-5 (]: SQL status: OK in 1.600 seconds
+[0m22:15:02.898213 [debug] [Thread-5 (]: Databricks adapter: Cursor(session-id=01f1c681-fcae-1f3b-b73a-67559848d903, command-id=01f1c681-fcd0-1ce0-b793-eb3f17093571) - Closing
+[0m22:15:02.900872 [debug] [Thread-5 (]: On test.dbt_finance.not_null_transaction_channel_summary_total_transactions.068fd3983d: Close
+[0m22:15:02.902880 [debug] [Thread-5 (]: Databricks adapter: Connection(session-id=01f1c681-fcae-1f3b-b73a-67559848d903) - Closing
+[0m22:15:02.982013 [debug] [Thread-6 (]: SQL status: OK in 1.630 seconds
+[0m22:15:02.988069 [debug] [Thread-6 (]: Databricks adapter: Cursor(session-id=01f1c681-fcb4-1b68-af8e-f5715e878188, command-id=01f1c681-fcd7-1194-8070-533af6e8eddf) - Closing
+[0m22:15:02.988069 [debug] [Thread-6 (]: On test.dbt_finance.not_null_branch_performance_branch_code.d3f278beb5: Close
+[0m22:15:02.989836 [debug] [Thread-6 (]: Databricks adapter: Connection(session-id=01f1c681-fcb4-1b68-af8e-f5715e878188) - Closing
+[0m22:15:03.146806 [info ] [Thread-5 (]: 16 of 20 PASS not_null_transaction_channel_summary_total_transactions .......... [[32mPASS[0m in 1.89s]
+[0m22:15:03.149023 [debug] [Thread-5 (]: Finished running node test.dbt_finance.not_null_transaction_channel_summary_total_transactions.068fd3983d
+[0m22:15:03.151045 [debug] [Thread-5 (]: Began running node test.dbt_finance.unique_customer_360_customer_id.932555fb9f
+[0m22:15:03.151045 [info ] [Thread-5 (]: 20 of 20 START test unique_customer_360_customer_id ............................ [RUN]
+[0m22:15:03.151045 [debug] [Thread-5 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.unique_customer_360_customer_id.932555fb9f) - Creating connection
+[0m22:15:03.151045 [debug] [Thread-5 (]: Acquiring new databricks connection 'test.dbt_finance.unique_customer_360_customer_id.932555fb9f'
+[0m22:15:03.151045 [debug] [Thread-5 (]: Began compiling node test.dbt_finance.unique_customer_360_customer_id.932555fb9f
+[0m22:15:03.161988 [debug] [Thread-5 (]: Writing injected SQL for node "test.dbt_finance.unique_customer_360_customer_id.932555fb9f"
+[0m22:15:03.164890 [debug] [Thread-5 (]: Began executing node test.dbt_finance.unique_customer_360_customer_id.932555fb9f
+[0m22:15:03.165672 [debug] [Thread-5 (]: Writing runtime sql for node "test.dbt_finance.unique_customer_360_customer_id.932555fb9f"
+[0m22:15:03.170279 [debug] [Thread-5 (]: Using databricks connection "test.dbt_finance.unique_customer_360_customer_id.932555fb9f"
+[0m22:15:03.170279 [debug] [Thread-5 (]: On test.dbt_finance.unique_customer_360_customer_id.932555fb9f: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "77d5e10f-41fe-429b-bc18-da874b67d4c4", "node_id": "test.dbt_finance.unique_customer_360_customer_id.932555fb9f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    customer_id as unique_field,
+    count(*) as n_records
+
+from `banking`.`gold_dbt`.`customer_360`
+where customer_id is not null
+group by customer_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:15:03.170279 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m22:15:03.234168 [info ] [Thread-6 (]: 17 of 20 PASS not_null_branch_performance_branch_code .......................... [[32mPASS[0m in 1.89s]
+[0m22:15:03.234168 [debug] [Thread-6 (]: Finished running node test.dbt_finance.not_null_branch_performance_branch_code.d3f278beb5
+[0m22:15:03.285286 [debug] [Thread-7 (]: SQL status: OK in 1.770 seconds
+[0m22:15:03.295072 [debug] [Thread-7 (]: Databricks adapter: Cursor(session-id=01f1c681-fcd2-1f6d-8170-4cb57e3ed4db, command-id=01f1c681-fcf7-13f2-83df-87f6924fb475) - Closing
+[0m22:15:03.298144 [debug] [Thread-7 (]: On test.dbt_finance.unique_branch_performance_branch_code.67b7721c2d: Close
+[0m22:15:03.298144 [debug] [Thread-7 (]: Databricks adapter: Connection(session-id=01f1c681-fcd2-1f6d-8170-4cb57e3ed4db) - Closing
+[0m22:15:03.523478 [debug] [Thread-4 (]: Databricks adapter: Connection(session-id=01f1c681-fd80-16b8-87d4-4655629100a2) - Created
+[0m22:15:03.539149 [info ] [Thread-7 (]: 18 of 20 PASS unique_branch_performance_branch_code ............................ [[32mPASS[0m in 2.05s]
+[0m22:15:03.539149 [debug] [Thread-7 (]: Finished running node test.dbt_finance.unique_branch_performance_branch_code.67b7721c2d
+[0m22:15:04.014627 [debug] [Thread-5 (]: Databricks adapter: Connection(session-id=01f1c681-fdc7-1d47-94d3-27b08e23c002) - Created
+[0m22:15:04.110194 [debug] [Thread-4 (]: SQL status: OK in 1.440 seconds
+[0m22:15:04.110194 [debug] [Thread-4 (]: Databricks adapter: Cursor(session-id=01f1c681-fd80-16b8-87d4-4655629100a2, command-id=01f1c681-fda1-12c9-99db-ca39f563f04b) - Closing
+[0m22:15:04.110194 [debug] [Thread-4 (]: On test.dbt_finance.not_null_customer_360_customer_id.b69699741f: Close
+[0m22:15:04.110194 [debug] [Thread-4 (]: Databricks adapter: Connection(session-id=01f1c681-fd80-16b8-87d4-4655629100a2) - Closing
+[0m22:15:04.389745 [info ] [Thread-4 (]: 19 of 20 PASS not_null_customer_360_customer_id ................................ [[32mPASS[0m in 1.76s]
+[0m22:15:04.389745 [debug] [Thread-4 (]: Finished running node test.dbt_finance.not_null_customer_360_customer_id.b69699741f
+[0m22:15:04.759057 [debug] [Thread-5 (]: SQL status: OK in 1.590 seconds
+[0m22:15:04.759057 [debug] [Thread-5 (]: Databricks adapter: Cursor(session-id=01f1c681-fdc7-1d47-94d3-27b08e23c002, command-id=01f1c681-fdeb-147a-928b-d413060d579c) - Closing
+[0m22:15:04.775166 [debug] [Thread-5 (]: On test.dbt_finance.unique_customer_360_customer_id.932555fb9f: Close
+[0m22:15:04.775166 [debug] [Thread-5 (]: Databricks adapter: Connection(session-id=01f1c681-fdc7-1d47-94d3-27b08e23c002) - Closing
+[0m22:15:05.013548 [info ] [Thread-5 (]: 20 of 20 PASS unique_customer_360_customer_id .................................. [[32mPASS[0m in 1.85s]
+[0m22:15:05.013548 [debug] [Thread-5 (]: Finished running node test.dbt_finance.unique_customer_360_customer_id.932555fb9f
+[0m22:15:05.013548 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m22:15:05.013548 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m22:15:05.013548 [info ] [MainThread]: 
+[0m22:15:05.013548 [info ] [MainThread]: Finished running 5 table models, 15 data tests in 0 hours 0 minutes and 44.30 seconds (44.30s).
+[0m22:15:05.022629 [debug] [MainThread]: Command end result
+[0m22:15:05.089896 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Dense\OneDrive\Documents\Databricks_finance_data\dbt_finance\target\manifest.json
+[0m22:15:05.089896 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Dense\OneDrive\Documents\Databricks_finance_data\dbt_finance\target\semantic_manifest.json
+[0m22:15:05.098457 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\Dense\OneDrive\Documents\Databricks_finance_data\dbt_finance\target\osi_document.json
+[0m22:15:05.106899 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Dense\OneDrive\Documents\Databricks_finance_data\dbt_finance\target\run_results.json
+[0m22:15:05.106899 [info ] [MainThread]: 
+[0m22:15:05.106899 [info ] [MainThread]: [33mCompleted with 2 warnings:[0m
+[0m22:15:05.106899 [info ] [MainThread]: 
+[0m22:15:05.106899 [warn ] [MainThread]: [[33mWARNING[0m]: in test source_unique_silver_accounts_account_id (models\sources.yml)
+[0m22:15:05.106899 [warn ] [MainThread]: [[33mWARNING[0m]: Got 4500 results, configured to warn if != 0
+[0m22:15:05.115022 [info ] [MainThread]: 
+[0m22:15:05.115022 [info ] [MainThread]:   compiled code at target\compiled\dbt_finance\models\sources.yml\source_unique_silver_accounts_account_id.sql
+[0m22:15:05.115022 [info ] [MainThread]: 
+[0m22:15:05.117559 [warn ] [MainThread]: [[33mWARNING[0m]: in test source_unique_silver_transactions_txn_id (models\sources.yml)
+[0m22:15:05.117559 [warn ] [MainThread]: [[33mWARNING[0m]: Got 15000 results, configured to warn if != 0
+[0m22:15:05.119214 [info ] [MainThread]: 
+[0m22:15:05.120987 [info ] [MainThread]:   compiled code at target\compiled\dbt_finance\models\sources.yml\source_unique_silver_transactions_txn_id.sql
+[0m22:15:05.122248 [info ] [MainThread]: 
+[0m22:15:05.124284 [info ] [MainThread]: Done. PASS=18 WARN=2 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=20
+[0m22:15:05.124284 [debug] [MainThread]: Command `dbt build` succeeded at 22:15:05.124284 after 48.64 seconds
+[0m22:15:05.124284 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026DE17781A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026DE0E379E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026DE0EADC10>]}
+[0m22:15:05.124284 [debug] [MainThread]: Flushing usage events
+[0m22:15:06.404159 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:19:36.757486 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002187D294140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002187D296600>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002187B9F6450>]}
+
+
+============================== 22:19:36.763576 | 7bc61871-2474-4418-821c-94278014b0ce ==============================
+[0m22:19:36.763576 [info ] [MainThread]: Running with dbt=1.12.5
+[0m22:19:36.763576 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Dense\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt docs generate', 'log_path': 'C:\\Users\\Dense\\OneDrive\\Documents\\Databricks_finance_data\\dbt_finance\\logs'}
+[0m22:19:38.076238 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m22:19:38.076238 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m22:19:38.076238 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m22:19:39.753312 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7bc61871-2474-4418-821c-94278014b0ce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002181F9353A0>]}
+[0m22:19:39.859844 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7bc61871-2474-4418-821c-94278014b0ce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002181F58D430>]}
+[0m22:19:39.859844 [info ] [MainThread]: Registered adapter: databricks=1.12.7
+[0m22:19:40.276443 [debug] [MainThread]: checksum: 331e93410bbea94870da9acf32ff0bb501848323dce5fa75a919d32d912375a9, vars: {}, profile: dbt_finance, target: dev, version: 1.12.5
+[0m22:19:40.469213 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:19:40.469213 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m22:19:40.469213 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:19:40.481173 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7bc61871-2474-4418-821c-94278014b0ce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021821738C80>]}
+[0m22:19:40.566349 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7bc61871-2474-4418-821c-94278014b0ce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002182173AA50>]}
+[0m22:19:40.566349 [info ] [MainThread]: Found 5 models, 15 data tests, 6 sources, 776 macros
+[0m22:19:40.568372 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7bc61871-2474-4418-821c-94278014b0ce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002187D488500>]}
+[0m22:19:40.568372 [info ] [MainThread]: 
+[0m22:19:40.568372 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:19:40.568372 [info ] [MainThread]: 
+[0m22:19:40.574670 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m22:19:40.574670 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m22:19:40.584557 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_banking_gold_dbt) - Creating connection
+[0m22:19:40.584557 [debug] [ThreadPool]: Acquiring new databricks connection 'list_banking_gold_dbt'
+[0m22:19:40.606955 [debug] [ThreadPool]: Using databricks connection "list_banking_gold_dbt"
+[0m22:19:40.606955 [debug] [ThreadPool]: On list_banking_gold_dbt: /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "7bc61871-2474-4418-821c-94278014b0ce", "connection_name": "list_banking_gold_dbt"} */
+
+    
+SELECT
+  table_name,
+  if(table_type IN ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE', 'EXTERNAL_SHALLOW_CLONE'), 'table', lower(table_type)) AS table_type,
+  lower(data_source_format) AS file_format,
+  table_owner,
+  if(
+    table_type IN (
+      'EXTERNAL',
+      'MANAGED',
+      'MANAGED_SHALLOW_CLONE',
+      'EXTERNAL_SHALLOW_CLONE'
+    ),
+    lower(table_type),
+    NULL
+  ) AS databricks_table_type
+FROM `system`.`information_schema`.`tables`
+WHERE table_catalog = 'banking'
+  AND table_schema = 'gold_dbt'
+
+  
+[0m22:19:40.606955 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:19:45.032333 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f1c682-a4bc-1389-ae12-eaff4db57fd4) - Created
+[0m22:19:45.738493 [debug] [ThreadPool]: SQL status: OK in 5.130 seconds
+[0m22:19:45.753629 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f1c682-a4bc-1389-ae12-eaff4db57fd4, command-id=01f1c682-a56b-11de-8bf3-c7cc024b045f) - Closing
+[0m22:19:45.753629 [debug] [ThreadPool]: On list_banking_gold_dbt: Close
+[0m22:19:45.758309 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f1c682-a4bc-1389-ae12-eaff4db57fd4) - Closing
+[0m22:19:46.039407 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7bc61871-2474-4418-821c-94278014b0ce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000218214F7590>]}
+[0m22:19:46.050670 [debug] [Thread-2 (]: Began running node model.dbt_finance.branch_performance
+[0m22:19:46.050670 [debug] [Thread-3 (]: Began running node model.dbt_finance.customer_360
+[0m22:19:46.053917 [debug] [Thread-2 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.dbt_finance.branch_performance) - Creating connection
+[0m22:19:46.053917 [debug] [Thread-4 (]: Began running node model.dbt_finance.daily_bank_kpi
+[0m22:19:46.055445 [debug] [Thread-5 (]: Began running node model.dbt_finance.risk_customer_summary
+[0m22:19:46.057469 [debug] [Thread-3 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.dbt_finance.customer_360) - Creating connection
+[0m22:19:46.059493 [debug] [Thread-2 (]: Acquiring new databricks connection 'model.dbt_finance.branch_performance'
+[0m22:19:46.061516 [debug] [Thread-4 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.dbt_finance.daily_bank_kpi) - Creating connection
+[0m22:19:46.065966 [debug] [Thread-5 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.dbt_finance.risk_customer_summary) - Creating connection
+[0m22:19:46.065966 [debug] [Thread-3 (]: Acquiring new databricks connection 'model.dbt_finance.customer_360'
+[0m22:19:46.067991 [debug] [Thread-2 (]: Began compiling node model.dbt_finance.branch_performance
+[0m22:19:46.070014 [debug] [Thread-4 (]: Acquiring new databricks connection 'model.dbt_finance.daily_bank_kpi'
+[0m22:19:46.071537 [debug] [Thread-5 (]: Acquiring new databricks connection 'model.dbt_finance.risk_customer_summary'
+[0m22:19:46.071537 [debug] [Thread-3 (]: Began compiling node model.dbt_finance.customer_360
+[0m22:19:46.094145 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_finance.branch_performance"
+[0m22:19:46.096424 [debug] [Thread-4 (]: Began compiling node model.dbt_finance.daily_bank_kpi
+[0m22:19:46.096424 [debug] [Thread-5 (]: Began compiling node model.dbt_finance.risk_customer_summary
+[0m22:19:46.103411 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_finance.customer_360"
+[0m22:19:46.118743 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_finance.daily_bank_kpi"
+[0m22:19:46.120760 [debug] [Thread-5 (]: Writing injected SQL for node "model.dbt_finance.risk_customer_summary"
+[0m22:19:46.124806 [debug] [Thread-2 (]: Began executing node model.dbt_finance.branch_performance
+[0m22:19:46.124806 [debug] [Thread-2 (]: Finished running node model.dbt_finance.branch_performance
+[0m22:19:46.126827 [debug] [Thread-2 (]: Began running node model.dbt_finance.transaction_channel_summary
+[0m22:19:46.128848 [debug] [Thread-2 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.dbt_finance.transaction_channel_summary) - Creating connection
+[0m22:19:46.128848 [debug] [Thread-2 (]: Acquiring new databricks connection 'model.dbt_finance.transaction_channel_summary'
+[0m22:19:46.128848 [debug] [Thread-3 (]: Began executing node model.dbt_finance.customer_360
+[0m22:19:46.128848 [debug] [Thread-4 (]: Began executing node model.dbt_finance.daily_bank_kpi
+[0m22:19:46.128848 [debug] [Thread-2 (]: Began compiling node model.dbt_finance.transaction_channel_summary
+[0m22:19:46.134464 [debug] [Thread-3 (]: Finished running node model.dbt_finance.customer_360
+[0m22:19:46.134464 [debug] [Thread-5 (]: Began executing node model.dbt_finance.risk_customer_summary
+[0m22:19:46.136490 [debug] [Thread-4 (]: Finished running node model.dbt_finance.daily_bank_kpi
+[0m22:19:46.142543 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_finance.transaction_channel_summary"
+[0m22:19:46.144496 [debug] [Thread-3 (]: Began running node test.dbt_finance.source_not_null_silver_accounts_account_id.273a6cc41b
+[0m22:19:46.146525 [debug] [Thread-5 (]: Finished running node model.dbt_finance.risk_customer_summary
+[0m22:19:46.148555 [debug] [Thread-4 (]: Began running node test.dbt_finance.source_not_null_silver_branches_branch_code.4d1ac95604
+[0m22:19:46.150320 [debug] [Thread-3 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.source_not_null_silver_accounts_account_id.273a6cc41b) - Creating connection
+[0m22:19:46.152346 [debug] [Thread-5 (]: Began running node test.dbt_finance.source_not_null_silver_customers_customer_id.a0f2a5090b
+[0m22:19:46.152346 [debug] [Thread-4 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.source_not_null_silver_branches_branch_code.4d1ac95604) - Creating connection
+[0m22:19:46.154365 [debug] [Thread-3 (]: Acquiring new databricks connection 'test.dbt_finance.source_not_null_silver_accounts_account_id.273a6cc41b'
+[0m22:19:46.154365 [debug] [Thread-2 (]: Began executing node model.dbt_finance.transaction_channel_summary
+[0m22:19:46.154365 [debug] [Thread-5 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.source_not_null_silver_customers_customer_id.a0f2a5090b) - Creating connection
+[0m22:19:46.156381 [debug] [Thread-4 (]: Acquiring new databricks connection 'test.dbt_finance.source_not_null_silver_branches_branch_code.4d1ac95604'
+[0m22:19:46.156381 [debug] [Thread-3 (]: Began compiling node test.dbt_finance.source_not_null_silver_accounts_account_id.273a6cc41b
+[0m22:19:46.158395 [debug] [Thread-2 (]: Finished running node model.dbt_finance.transaction_channel_summary
+[0m22:19:46.158395 [debug] [Thread-5 (]: Acquiring new databricks connection 'test.dbt_finance.source_not_null_silver_customers_customer_id.a0f2a5090b'
+[0m22:19:46.158395 [debug] [Thread-4 (]: Began compiling node test.dbt_finance.source_not_null_silver_branches_branch_code.4d1ac95604
+[0m22:19:46.181612 [debug] [Thread-2 (]: Began running node test.dbt_finance.source_not_null_silver_transactions_txn_id.694f448e97
+[0m22:19:46.183633 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_finance.source_not_null_silver_accounts_account_id.273a6cc41b"
+[0m22:19:46.183633 [debug] [Thread-5 (]: Began compiling node test.dbt_finance.source_not_null_silver_customers_customer_id.a0f2a5090b
+[0m22:19:46.198156 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_finance.source_not_null_silver_branches_branch_code.4d1ac95604"
+[0m22:19:46.198156 [debug] [Thread-2 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.source_not_null_silver_transactions_txn_id.694f448e97) - Creating connection
+[0m22:19:46.213127 [debug] [Thread-5 (]: Writing injected SQL for node "test.dbt_finance.source_not_null_silver_customers_customer_id.a0f2a5090b"
+[0m22:19:46.213127 [debug] [Thread-2 (]: Acquiring new databricks connection 'test.dbt_finance.source_not_null_silver_transactions_txn_id.694f448e97'
+[0m22:19:46.213127 [debug] [Thread-3 (]: Began executing node test.dbt_finance.source_not_null_silver_accounts_account_id.273a6cc41b
+[0m22:19:46.213127 [debug] [Thread-2 (]: Began compiling node test.dbt_finance.source_not_null_silver_transactions_txn_id.694f448e97
+[0m22:19:46.217469 [debug] [Thread-3 (]: Finished running node test.dbt_finance.source_not_null_silver_accounts_account_id.273a6cc41b
+[0m22:19:46.229691 [debug] [Thread-4 (]: Began executing node test.dbt_finance.source_not_null_silver_branches_branch_code.4d1ac95604
+[0m22:19:46.230287 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_finance.source_not_null_silver_transactions_txn_id.694f448e97"
+[0m22:19:46.230826 [debug] [Thread-3 (]: Began running node test.dbt_finance.source_unique_silver_accounts_account_id.c8bc709a79
+[0m22:19:46.231894 [debug] [Thread-4 (]: Finished running node test.dbt_finance.source_not_null_silver_branches_branch_code.4d1ac95604
+[0m22:19:46.232468 [debug] [Thread-5 (]: Began executing node test.dbt_finance.source_not_null_silver_customers_customer_id.a0f2a5090b
+[0m22:19:46.233112 [debug] [Thread-3 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.source_unique_silver_accounts_account_id.c8bc709a79) - Creating connection
+[0m22:19:46.233896 [debug] [Thread-4 (]: Began running node test.dbt_finance.source_unique_silver_branches_branch_code.d51cecfa79
+[0m22:19:46.235032 [debug] [Thread-5 (]: Finished running node test.dbt_finance.source_not_null_silver_customers_customer_id.a0f2a5090b
+[0m22:19:46.236165 [debug] [Thread-3 (]: Acquiring new databricks connection 'test.dbt_finance.source_unique_silver_accounts_account_id.c8bc709a79'
+[0m22:19:46.237249 [debug] [Thread-4 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.source_unique_silver_branches_branch_code.d51cecfa79) - Creating connection
+[0m22:19:46.237842 [debug] [Thread-2 (]: Began executing node test.dbt_finance.source_not_null_silver_transactions_txn_id.694f448e97
+[0m22:19:46.238384 [debug] [Thread-5 (]: Began running node test.dbt_finance.source_unique_silver_customers_customer_id.9171277f53
+[0m22:19:46.238958 [debug] [Thread-3 (]: Began compiling node test.dbt_finance.source_unique_silver_accounts_account_id.c8bc709a79
+[0m22:19:46.239530 [debug] [Thread-4 (]: Acquiring new databricks connection 'test.dbt_finance.source_unique_silver_branches_branch_code.d51cecfa79'
+[0m22:19:46.240642 [debug] [Thread-2 (]: Finished running node test.dbt_finance.source_not_null_silver_transactions_txn_id.694f448e97
+[0m22:19:46.240642 [debug] [Thread-5 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.source_unique_silver_customers_customer_id.9171277f53) - Creating connection
+[0m22:19:46.245302 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_finance.source_unique_silver_accounts_account_id.c8bc709a79"
+[0m22:19:46.245302 [debug] [Thread-4 (]: Began compiling node test.dbt_finance.source_unique_silver_branches_branch_code.d51cecfa79
+[0m22:19:46.245302 [debug] [Thread-2 (]: Began running node test.dbt_finance.source_unique_silver_transactions_txn_id.78d2023c8e
+[0m22:19:46.245302 [debug] [Thread-5 (]: Acquiring new databricks connection 'test.dbt_finance.source_unique_silver_customers_customer_id.9171277f53'
+[0m22:19:46.272903 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_finance.source_unique_silver_branches_branch_code.d51cecfa79"
+[0m22:19:46.272903 [debug] [Thread-2 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.source_unique_silver_transactions_txn_id.78d2023c8e) - Creating connection
+[0m22:19:46.274923 [debug] [Thread-5 (]: Began compiling node test.dbt_finance.source_unique_silver_customers_customer_id.9171277f53
+[0m22:19:46.274923 [debug] [Thread-2 (]: Acquiring new databricks connection 'test.dbt_finance.source_unique_silver_transactions_txn_id.78d2023c8e'
+[0m22:19:46.274923 [debug] [Thread-3 (]: Began executing node test.dbt_finance.source_unique_silver_accounts_account_id.c8bc709a79
+[0m22:19:46.288386 [debug] [Thread-5 (]: Writing injected SQL for node "test.dbt_finance.source_unique_silver_customers_customer_id.9171277f53"
+[0m22:19:46.288386 [debug] [Thread-2 (]: Began compiling node test.dbt_finance.source_unique_silver_transactions_txn_id.78d2023c8e
+[0m22:19:46.290402 [debug] [Thread-3 (]: Finished running node test.dbt_finance.source_unique_silver_accounts_account_id.c8bc709a79
+[0m22:19:46.302960 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_finance.source_unique_silver_transactions_txn_id.78d2023c8e"
+[0m22:19:46.302960 [debug] [Thread-3 (]: Began running node test.dbt_finance.not_null_branch_performance_branch_code.d3f278beb5
+[0m22:19:46.304975 [debug] [Thread-4 (]: Began executing node test.dbt_finance.source_unique_silver_branches_branch_code.d51cecfa79
+[0m22:19:46.304975 [debug] [Thread-5 (]: Began executing node test.dbt_finance.source_unique_silver_customers_customer_id.9171277f53
+[0m22:19:46.306986 [debug] [Thread-3 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.not_null_branch_performance_branch_code.d3f278beb5) - Creating connection
+[0m22:19:46.306986 [debug] [Thread-4 (]: Finished running node test.dbt_finance.source_unique_silver_branches_branch_code.d51cecfa79
+[0m22:19:46.308509 [debug] [Thread-5 (]: Finished running node test.dbt_finance.source_unique_silver_customers_customer_id.9171277f53
+[0m22:19:46.308509 [debug] [Thread-3 (]: Acquiring new databricks connection 'test.dbt_finance.not_null_branch_performance_branch_code.d3f278beb5'
+[0m22:19:46.310528 [debug] [Thread-4 (]: Began running node test.dbt_finance.unique_branch_performance_branch_code.67b7721c2d
+[0m22:19:46.310528 [debug] [Thread-2 (]: Began executing node test.dbt_finance.source_unique_silver_transactions_txn_id.78d2023c8e
+[0m22:19:46.310528 [debug] [Thread-5 (]: Began running node test.dbt_finance.not_null_customer_360_customer_id.b69699741f
+[0m22:19:46.310528 [debug] [Thread-3 (]: Began compiling node test.dbt_finance.not_null_branch_performance_branch_code.d3f278beb5
+[0m22:19:46.310528 [debug] [Thread-4 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.unique_branch_performance_branch_code.67b7721c2d) - Creating connection
+[0m22:19:46.314539 [debug] [Thread-2 (]: Finished running node test.dbt_finance.source_unique_silver_transactions_txn_id.78d2023c8e
+[0m22:19:46.314539 [debug] [Thread-5 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.not_null_customer_360_customer_id.b69699741f) - Creating connection
+[0m22:19:46.326455 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_finance.not_null_branch_performance_branch_code.d3f278beb5"
+[0m22:19:46.328480 [debug] [Thread-4 (]: Acquiring new databricks connection 'test.dbt_finance.unique_branch_performance_branch_code.67b7721c2d'
+[0m22:19:46.329004 [debug] [Thread-2 (]: Began running node test.dbt_finance.unique_customer_360_customer_id.932555fb9f
+[0m22:19:46.329004 [debug] [Thread-5 (]: Acquiring new databricks connection 'test.dbt_finance.not_null_customer_360_customer_id.b69699741f'
+[0m22:19:46.329004 [debug] [Thread-4 (]: Began compiling node test.dbt_finance.unique_branch_performance_branch_code.67b7721c2d
+[0m22:19:46.331022 [debug] [Thread-2 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.unique_customer_360_customer_id.932555fb9f) - Creating connection
+[0m22:19:46.331022 [debug] [Thread-5 (]: Began compiling node test.dbt_finance.not_null_customer_360_customer_id.b69699741f
+[0m22:19:46.338901 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_finance.unique_branch_performance_branch_code.67b7721c2d"
+[0m22:19:46.338901 [debug] [Thread-2 (]: Acquiring new databricks connection 'test.dbt_finance.unique_customer_360_customer_id.932555fb9f'
+[0m22:19:46.347356 [debug] [Thread-5 (]: Writing injected SQL for node "test.dbt_finance.not_null_customer_360_customer_id.b69699741f"
+[0m22:19:46.349371 [debug] [Thread-3 (]: Began executing node test.dbt_finance.not_null_branch_performance_branch_code.d3f278beb5
+[0m22:19:46.349371 [debug] [Thread-2 (]: Began compiling node test.dbt_finance.unique_customer_360_customer_id.932555fb9f
+[0m22:19:46.351390 [debug] [Thread-3 (]: Finished running node test.dbt_finance.not_null_branch_performance_branch_code.d3f278beb5
+[0m22:19:46.357561 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_finance.unique_customer_360_customer_id.932555fb9f"
+[0m22:19:46.360644 [debug] [Thread-3 (]: Began running node test.dbt_finance.unique_daily_bank_kpi_txn_date.db20d9585a
+[0m22:19:46.360644 [debug] [Thread-4 (]: Began executing node test.dbt_finance.unique_branch_performance_branch_code.67b7721c2d
+[0m22:19:46.360644 [debug] [Thread-3 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.unique_daily_bank_kpi_txn_date.db20d9585a) - Creating connection
+[0m22:19:46.362669 [debug] [Thread-5 (]: Began executing node test.dbt_finance.not_null_customer_360_customer_id.b69699741f
+[0m22:19:46.362669 [debug] [Thread-4 (]: Finished running node test.dbt_finance.unique_branch_performance_branch_code.67b7721c2d
+[0m22:19:46.362669 [debug] [Thread-3 (]: Acquiring new databricks connection 'test.dbt_finance.unique_daily_bank_kpi_txn_date.db20d9585a'
+[0m22:19:46.362669 [debug] [Thread-5 (]: Finished running node test.dbt_finance.not_null_customer_360_customer_id.b69699741f
+[0m22:19:46.362669 [debug] [Thread-2 (]: Began executing node test.dbt_finance.unique_customer_360_customer_id.932555fb9f
+[0m22:19:46.362669 [debug] [Thread-4 (]: Began running node test.dbt_finance.unique_risk_customer_summary_risk_grade.7d9f51b341
+[0m22:19:46.362669 [debug] [Thread-3 (]: Began compiling node test.dbt_finance.unique_daily_bank_kpi_txn_date.db20d9585a
+[0m22:19:46.362669 [debug] [Thread-5 (]: Began running node test.dbt_finance.not_null_transaction_channel_summary_total_transactions.068fd3983d
+[0m22:19:46.366956 [debug] [Thread-2 (]: Finished running node test.dbt_finance.unique_customer_360_customer_id.932555fb9f
+[0m22:19:46.366956 [debug] [Thread-4 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.unique_risk_customer_summary_risk_grade.7d9f51b341) - Creating connection
+[0m22:19:46.376351 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_finance.unique_daily_bank_kpi_txn_date.db20d9585a"
+[0m22:19:46.378369 [debug] [Thread-5 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.dbt_finance.not_null_transaction_channel_summary_total_transactions.068fd3983d) - Creating connection
+[0m22:19:46.378369 [debug] [Thread-4 (]: Acquiring new databricks connection 'test.dbt_finance.unique_risk_customer_summary_risk_grade.7d9f51b341'
+[0m22:19:46.378369 [debug] [Thread-5 (]: Acquiring new databricks connection 'test.dbt_finance.not_null_transaction_channel_summary_total_transactions.068fd3983d'
+[0m22:19:46.378369 [debug] [Thread-4 (]: Began compiling node test.dbt_finance.unique_risk_customer_summary_risk_grade.7d9f51b341
+[0m22:19:46.378369 [debug] [Thread-5 (]: Began compiling node test.dbt_finance.not_null_transaction_channel_summary_total_transactions.068fd3983d
+[0m22:19:46.390669 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_finance.unique_risk_customer_summary_risk_grade.7d9f51b341"
+[0m22:19:46.401975 [debug] [Thread-3 (]: Began executing node test.dbt_finance.unique_daily_bank_kpi_txn_date.db20d9585a
+[0m22:19:46.401975 [debug] [Thread-5 (]: Writing injected SQL for node "test.dbt_finance.not_null_transaction_channel_summary_total_transactions.068fd3983d"
+[0m22:19:46.404000 [debug] [Thread-3 (]: Finished running node test.dbt_finance.unique_daily_bank_kpi_txn_date.db20d9585a
+[0m22:19:46.404000 [debug] [Thread-4 (]: Began executing node test.dbt_finance.unique_risk_customer_summary_risk_grade.7d9f51b341
+[0m22:19:46.406021 [debug] [Thread-4 (]: Finished running node test.dbt_finance.unique_risk_customer_summary_risk_grade.7d9f51b341
+[0m22:19:46.406021 [debug] [Thread-5 (]: Began executing node test.dbt_finance.not_null_transaction_channel_summary_total_transactions.068fd3983d
+[0m22:19:46.406021 [debug] [Thread-5 (]: Finished running node test.dbt_finance.not_null_transaction_channel_summary_total_transactions.068fd3983d
+[0m22:19:46.409528 [debug] [MainThread]: Command end result
+[0m22:19:46.553444 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Dense\OneDrive\Documents\Databricks_finance_data\dbt_finance\target\manifest.json
+[0m22:19:46.560156 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Dense\OneDrive\Documents\Databricks_finance_data\dbt_finance\target\semantic_manifest.json
+[0m22:19:46.587871 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\Dense\OneDrive\Documents\Databricks_finance_data\dbt_finance\target\osi_document.json
+[0m22:19:46.594155 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Dense\OneDrive\Documents\Databricks_finance_data\dbt_finance\target\run_results.json
+[0m22:19:46.604546 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=generate_catalog) - Creating connection
+[0m22:19:46.604546 [debug] [MainThread]: Acquiring new databricks connection 'generate_catalog'
+[0m22:19:46.604546 [info ] [MainThread]: Building catalog
+[0m22:19:46.607838 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=('banking', 'gold_dbt')) - Creating connection
+[0m22:19:46.607838 [debug] [ThreadPool]: Acquiring new databricks connection '('banking', 'gold_dbt')'
+[0m22:19:46.613769 [debug] [ThreadPool]: Using databricks connection "('banking', 'gold_dbt')"
+[0m22:19:46.613769 [debug] [ThreadPool]: On ('banking', 'gold_dbt'): /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "7bc61871-2474-4418-821c-94278014b0ce", "connection_name": "('banking', 'gold_dbt')"} */
+
+    
+SELECT current_catalog()
+
+  
+[0m22:19:46.613769 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=('banking', 'silver')) - Creating connection
+[0m22:19:46.613769 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:19:46.613769 [debug] [ThreadPool]: Acquiring new databricks connection '('banking', 'silver')'
+[0m22:19:46.613769 [debug] [ThreadPool]: Using databricks connection "('banking', 'silver')"
+[0m22:19:46.613769 [debug] [ThreadPool]: On ('banking', 'silver'): /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "7bc61871-2474-4418-821c-94278014b0ce", "connection_name": "('banking', 'silver')"} */
+
+    
+SELECT current_catalog()
+
+  
+[0m22:19:46.613769 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:19:47.630520 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f1c682-a6d0-1ab7-8f6c-6914ef8ded40) - Created
+[0m22:19:47.632264 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f1c682-a6d2-11e6-bd13-0488a3914947) - Created
+[0m22:19:48.089872 [debug] [ThreadPool]: SQL status: OK in 1.470 seconds
+[0m22:19:48.089872 [debug] [ThreadPool]: SQL status: OK in 1.480 seconds
+[0m22:19:48.089872 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f1c682-a6d2-11e6-bd13-0488a3914947, command-id=01f1c682-a6f6-1b0a-81dc-1842bac93522) - Closing
+[0m22:19:48.102185 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f1c682-a6d0-1ab7-8f6c-6914ef8ded40, command-id=01f1c682-a6f6-1780-81f7-2ad8d7ff36b8) - Closing
+[0m22:19:48.108936 [debug] [ThreadPool]: Using databricks connection "('banking', 'gold_dbt')"
+[0m22:19:48.110950 [debug] [ThreadPool]: Using databricks connection "('banking', 'silver')"
+[0m22:19:48.110950 [debug] [ThreadPool]: On ('banking', 'gold_dbt'): /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "7bc61871-2474-4418-821c-94278014b0ce", "connection_name": "('banking', 'gold_dbt')"} */
+
+    
+SHOW TABLE EXTENDED IN `banking`.`gold_dbt` LIKE 'risk_customer_summary|daily_bank_kpi|customer_360|transaction_channel_summary|branch_performance'
+
+  
+[0m22:19:48.112970 [debug] [ThreadPool]: On ('banking', 'silver'): /* {"app": "dbt", "dbt_version": "1.12.5", "dbt_databricks_version": "1.12.7", "databricks_sql_connector_version": "4.4.0", "profile_name": "dbt_finance", "target_name": "dev", "invocation_id": "7bc61871-2474-4418-821c-94278014b0ce", "connection_name": "('banking', 'silver')"} */
+
+    
+SHOW TABLE EXTENDED IN `banking`.`silver` LIKE 'customers|transactions|branches|credit_bureau_reports|accounts|payment_gateway_logs'
+
+  
+[0m22:19:49.106776 [debug] [ThreadPool]: SQL status: OK in 0.990 seconds
+[0m22:19:49.116704 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f1c682-a6d0-1ab7-8f6c-6914ef8ded40, command-id=01f1c682-a73f-1f7a-b0f1-6eee6dc40546) - Closing
+[0m22:19:49.131871 [debug] [ThreadPool]: On ('banking', 'gold_dbt'): Close
+[0m22:19:49.131871 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f1c682-a6d0-1ab7-8f6c-6914ef8ded40) - Closing
+[0m22:19:49.174600 [debug] [ThreadPool]: SQL status: OK in 1.060 seconds
+[0m22:19:49.185706 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f1c682-a6d2-11e6-bd13-0488a3914947, command-id=01f1c682-a740-1387-9e7c-468a0112059f) - Closing
+[0m22:19:49.204696 [debug] [ThreadPool]: On ('banking', 'silver'): Close
+[0m22:19:49.206718 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f1c682-a6d2-11e6-bd13-0488a3914947) - Closing
+[0m22:19:49.474084 [debug] [MainThread]: Wrote artifact CatalogArtifact to C:\Users\Dense\OneDrive\Documents\Databricks_finance_data\dbt_finance\target\catalog.json
+[0m22:19:49.538446 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Dense\OneDrive\Documents\Databricks_finance_data\dbt_finance\target\manifest.json
+[0m22:19:49.544951 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Dense\OneDrive\Documents\Databricks_finance_data\dbt_finance\target\semantic_manifest.json
+[0m22:19:49.548978 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\Dense\OneDrive\Documents\Databricks_finance_data\dbt_finance\target\osi_document.json
+[0m22:19:49.548978 [info ] [MainThread]: Catalog written to C:\Users\Dense\OneDrive\Documents\Databricks_finance_data\dbt_finance\target\catalog.json
+[0m22:19:49.550989 [debug] [MainThread]: Command `dbt docs generate` succeeded at 22:19:49.550989 after 13.10 seconds
+[0m22:19:49.550989 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002187D25A0C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002187D25A030>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002187D25A0F0>]}
+[0m22:19:49.550989 [debug] [MainThread]: Flushing usage events
+[0m22:19:50.540899 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:20:36.051949 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215208A41D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002151E1DE8A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002151EEDE090>]}
+
+
+============================== 22:20:36.068141 | ba44ff0c-95ee-4270-bc2d-3f384e072e2f ==============================
+[0m22:20:36.068141 [info ] [MainThread]: Running with dbt=1.12.5
+[0m22:20:36.068141 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Dense\\.dbt', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt docs serve', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Users\\Dense\\OneDrive\\Documents\\Databricks_finance_data\\dbt_finance\\logs'}
+[0m22:20:37.158118 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m22:20:37.158118 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m22:20:37.160134 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m22:20:38.526456 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ba44ff0c-95ee-4270-bc2d-3f384e072e2f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002151E14BE60>]}
+[0m22:20:38.619015 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ba44ff0c-95ee-4270-bc2d-3f384e072e2f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215229AD5B0>]}
+[0m23:30:20.289306 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+
+[0m23:30:20.397297 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\Dense\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 198, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dense\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 144, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dense\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 295, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dense\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 340, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dense\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 387, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dense\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\main.py", line 323, in docs_serve
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\Dense\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\task\docs\serve.py", line 29, in run
+    httpd.serve_forever()
+  File "C:\Users\Dense\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 235, in serve_forever
+    ready = selector.select(poll_interval)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dense\AppData\Local\Programs\Python\Python312\Lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dense\AppData\Local\Programs\Python\Python312\Lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m23:30:20.472888 [debug] [MainThread]: Command `dbt docs serve` failed at 23:30:20.472888 after 4184.66 seconds
+[0m23:30:20.478406 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021520A13650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021544965C40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215447A15E0>]}
+[0m23:30:20.486924 [debug] [MainThread]: Flushing usage events
+[0m23:30:22.196283 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:30:29.671476 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EDD8376600>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EDD86E04D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EDDBA266F0>]}
+
+
+============================== 23:30:29.683879 | 45958816-9721-4aec-b65d-6903f05ac2e0 ==============================
+[0m23:30:29.683879 [info ] [MainThread]: Running with dbt=1.12.5
+[0m23:30:29.683879 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Dense\\.dbt', 'invocation_command': 'dbt clean', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'C:\\Users\\Dense\\OneDrive\\Documents\\Databricks_finance_data\\dbt_finance\\logs'}
+[0m23:30:30.073738 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '45958816-9721-4aec-b65d-6903f05ac2e0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EDDB7AD6D0>]}
+[0m23:30:30.272251 [debug] [MainThread]: Command `dbt clean` succeeded at 23:30:30.272251 after 0.88 seconds
+[0m23:30:30.272251 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EDDBA9DFA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EDDBA9E1E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EDDC45A1E0>]}
+[0m23:30:30.272251 [debug] [MainThread]: Flushing usage events
+[0m23:30:31.483567 [debug] [MainThread]: An error was encountered while trying to flush usage events

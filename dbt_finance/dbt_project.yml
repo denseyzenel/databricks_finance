@@ -1,0 +1,13 @@
+name: 'dbt_finance'
+version: '1.0.0'
+profile: 'dbt_finance'
+
+model-paths: ["models"]
+test-paths: ["tests"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+#The last block means every model in the models/gold folder is built as a real Delta table, the same as your CREATE OR REPLACE TABLE notebooks.
+models:
+  dbt_finance:
+    gold:
+      +materialized: table

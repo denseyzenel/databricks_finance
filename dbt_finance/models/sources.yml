@@ -1,0 +1,50 @@
+#These tests check your Silver data quality. severity: warn means a problem is reported in yellow but doesn't stop the run, because Silver is fed by your ingestion pipeline rather than by dbt.
+version: 2
+
+sources:
+  - name: silver
+    database: banking
+    schema: silver
+    tables:
+      - name: customers
+        columns:
+          - name: customer_id
+            data_tests:
+              - unique:
+                  config:
+                    severity: warn
+              - not_null:
+                  config:
+                    severity: warn
+      - name: accounts
+        columns:
+          - name: account_id
+            data_tests:
+              - unique:
+                  config:
+                    severity: warn
+              - not_null:
+                  config:
+                    severity: warn
+      - name: transactions
+        columns:
+          - name: txn_id
+            data_tests:
+              - unique:
+                  config:
+                    severity: warn
+              - not_null:
+                  config:
+                    severity: warn
+      - name: branches
+        columns:
+          - name: branch_code
+            data_tests:
+              - unique:
+                  config:
+                    severity: warn
+              - not_null:
+                  config:
+                    severity: warn
+      - name: credit_bureau_reports
+      - name: payment_gateway_logs

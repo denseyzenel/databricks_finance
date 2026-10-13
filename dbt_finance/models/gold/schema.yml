@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: customer_360
+    description: "One row per customer with balances, transactions and latest credit data."
+    columns:
+      - name: customer_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: branch_performance
+    description: "One row per branch with customers, deposits and transactions."
+    columns:
+      - name: branch_code
+        data_tests:
+          - unique
+          - not_null
+
+  - name: daily_bank_kpi
+    description: "One row per transaction date with bank-wide totals."
+    columns:
+      - name: txn_date
+        data_tests:
+          - unique
+
+  - name: risk_customer_summary
+    description: "One row per credit risk grade."
+    columns:
+      - name: risk_grade
+        data_tests:
+          - unique
+
+  - name: transaction_channel_summary
+    description: "Daily transactions by payment gateway and device type."
+    columns:
+      - name: total_transactions
+        data_tests:
+          - not_null
